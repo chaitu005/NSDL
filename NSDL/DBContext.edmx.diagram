@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a0ca56b85cfc416aaec1f8656048d3d6" Name="Diagram1" ZoomLevel="39">
+        <EntityTypeShape EntityType="DBContext.Bank_master" Width="1.5" PointX="17.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBContext.Branch_master" Width="1.5" PointX="11.375" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBContext.Chequemaster" Width="1.5" PointX="5.375" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBContext.Client_master1" Width="1.5" PointX="9.375" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBContext.Instrument_master" Width="1.5" PointX="3.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBContext.Stock_master" Width="1.5" PointX="5.375" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBContext.Lot_size" Width="1.5" PointX="7.375" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBContext.Vendor_master" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBContext.Book_size" Width="1.5" PointX="0.75" PointY="2.75" />
+        <EntityTypeShape EntityType="DBContext.Inward_entry" Width="1.5" PointX="19.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DBContext.Trxbackoffice" Width="1.5" PointX="17.375" PointY="5.75" />
+        <EntityTypeShape EntityType="DBContext.Security" Width="1.5" PointX="2.625" PointY="11.875" />
+        <EntityTypeShape EntityType="DBContext.Sysparameter" Width="1.5" PointX="13.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DBContext.Reasonfortrade" Width="1.5" PointX="13.375" PointY="4.75" />
+        <EntityTypeShape EntityType="DBContext.Bpmaster" Width="1.5" PointX="13.375" PointY="7.75" />
+        <EntityTypeShape EntityType="DBContext.Cc_calender" Width="1.5" PointX="13.375" PointY="12.75" />
+        <EntityTypeShape EntityType="DBContext.Chequestop" Width="1.5" PointX="3.375" PointY="4.75" />
+        <EntityTypeShape EntityType="DBContext.Rate_master" Width="1.5" PointX="15.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DBContext.Used_slip" Width="1.5" PointX="15.375" PointY="3.75" />
+        <EntityTypeShape EntityType="DBContext.Auth_master" Width="1.5" PointX="15.375" PointY="8.75" />
+        <EntityTypeShape EntityType="DBContext.Backoffice_balance" Width="1.5" PointX="15.375" PointY="12.75" />
+        <EntityTypeShape EntityType="DBContext.Backoffice_audit" Width="1.5" PointX="15.375" PointY="15.75" />
+        <EntityTypeShape EntityType="DBContext.Backoffice_delete" Width="1.5" PointX="0.75" PointY="19.75" />
+        <EntityTypeShape EntityType="DBContext.Interdepository" Width="1.5" PointX="19.375" PointY="6.75" />
+        <EntityTypeShape EntityType="DBContext.Interdepository_auth" Width="1.5" PointX="19.375" PointY="17.75" />
+        <EntityTypeShape EntityType="DBContext.Security_status" Width="1.5" PointX="5.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
