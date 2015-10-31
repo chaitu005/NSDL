@@ -1,0 +1,308 @@
+﻿.StepInstructions
+{
+	font-family:Verdana;
+	color:#000000;
+	font-size:11px;
+	font-weight:bold;
+}
+.WizardTitle
+{
+	font-family:Verdana;
+	color:#cc3300;
+	font-size:13px;
+	font-weight:bold;
+}
+body
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	font-size: 8pt;
+	color:#000000;	 
+	padding-bottom: 0px;
+	margin: 0px;
+	cursor: auto;
+	border-top-style: none;
+	padding-top: 0px;
+	font-family: Verdana, Arial;
+	border-right-style: none;
+	border-left-style: none;
+	position: absolute;
+	border-bottom-style: none;
+}
+
+.PageLink
+{
+    font-family: Times New Roman,verdana,arial;
+    font-size: 15px;
+    color: #cc3300;
+    font-weight: bold;
+
+}
+
+.EmptyDataRow
+{
+	font-family: Times New Roman,verdana,arial;
+    font-size: 15px;
+    color: #000000;
+    font-weight: bold;
+
+}
+
+.Grid
+{
+    padding:3px 3px 3px 3px;
+    border-left:solid 1px #cccccc;
+    border-top:solid 1px #cccccc;
+    border-bottom:outset 3px #cccccc;
+    border-right:outset 2px #cccccc;
+}
+  
+.GridHeader
+{
+    font-family: Times New Roman,verdana,arial;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    background: #cc3300;
+    
+}
+
+.GridRow
+{
+    font-family: Times New Roman,verdana,arial;
+    font-size: 15px;
+    color: #000000;
+}
+
+.PageTitle
+{
+    font-family:Times New Roman,Arial, Verdana ;
+    color: Black;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.StepTitle
+{
+    font-family:Times New Roman,Arial, Verdana ;
+    color:#000000;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.table
+{
+	font-size: 8pt;
+	font-family: Verdana;
+	border-color:#000000;
+	background-color:#FFE1E1;
+}
+
+.TextBox
+{	margin-bottom: 0px;
+}
+.TextNBackGround
+{
+   font-size: 8pt;
+   font-weight: bold;  
+   color: #ffffff;
+   background-color: #CC3300;
+   font-family: Verdana,'Times New Roman',Arial;
+} 
+
+.FormHeader
+{
+	font-size: 10pt;
+	background-color:  Lime;
+	font-weight:bold;
+	color:#000000;
+	font-family: Times New Roman,Arial;
+} 
+
+.clsChildMenu
+ {
+	color:#cc3300;
+	text-decoration: none;
+	width:145px;
+	padding:3px 5px 0px 1px;
+	font-weight: bold;
+	font-family: Times New Roman;
+	text-align: left;
+ }	
+		
+.StaticMenuItemStyle
+{
+	font-size: 12px;
+	font-weight: bold;
+	border-width: 1px;
+	border-style: none;
+	text-align: center;
+	background-color: Gray;
+	color: White;
+	font-family: 'Times New Roman' , Times, serif;
+    width:15em;
+    margin-right:3px;
+}
+
+.StaticMenuStyle
+{
+  width : 99.5%;
+}
+
+.DynamicMenuItemStyle
+{
+	color: Black;
+	font-weight: bold;
+	border-bottom:solid 3px #ffe1e1;
+	background-color:white;
+	font-family: Bookman Old Style;
+	padding:0px 0px 0px 1px;
+	text-align: left;
+    border-style: double;
+}
+
+.DynamicMenuStyle
+{
+   	border:ridge 1px #000000;
+	width: auto;
+}	
+ 
+ .fieldset
+{
+padding: 1px;
+ margin: 1px; 
+ vertical-align:top; 
+ width:600px;
+	
+	
+}
+.clsLabel
+{ 
+	font-size: 10pt;
+  	font-family:  Times New Roman,arial;
+	font-style:normal;
+	font-weight:bold;
+	width:150px;
+	background-color:  Transparent ;
+	 border-bottom-style:  none;	 
+}	
+.GridSortLink
+{
+    color:Black;
+}
+.clsText
+{
+	font-size: 9pt;
+	font-family:  Times New Roman,arial;
+	width:150px;
+}	
+
+.clsTextNBackGround
+{
+	font-size: 10pt;
+	font-weight:bold;  
+	color:#ffffff;
+	background-color:#CC3300;
+	font-family: 'Times New Roman' , Arial;
+}
+
+.clsButton
+{
+  font-size: 12px;
+  font-family: Times New Roman,arial;
+  width: 100px;
+  height: 25px;
+  background-color:Fuchsia; 
+ background-image: url(Images/post_button_save.gif) ;
+    	
+}		
+
+.FormRow
+{
+    font-family: Times New Roman,verdana,arial;
+    font-size: 15px;
+    color: #000000;
+    letter-spacing:1px;
+}
+	
+.PageButton
+{
+    border:solid 1px #000000;
+    font-family: Times New Roman,verdana,arial;
+    font-size:14px;
+    color:#ffffff ;
+    font-weight:bold;
+    background:#5377A9;
+  
+}
+
+.Form
+{
+    padding:3px 3px 3px 3px; 
+    border-left:solid 1px #cccccc;
+    border-top:solid 1px #cccccc;
+    border-bottom:outset 3px #cccccc;
+    border-right:outset 2px #cccccc;
+    background-color:Gray;
+}  
+
+.Heading
+{
+  font-family:  Book Antiqua;
+  padding: 1em 0 1em 0;
+  color : Black;
+  font-size : 15px; 	
+  font-weight: bold;
+  
+} 
+
+.clsMenu
+ {
+	color:#ffffff;
+	text-decoration: none;
+	width:145px;
+	padding:3px 5px 0px 1px;
+	font-weight: bold;
+	font-family: Verdana;
+	text-align: left;
+ }	
+ 
+ .WaterMarked
+ {
+	padding:2px 0 0 2px;
+	border:1px solid #BEBEBE;
+	background-color:#F0F8FF;
+	color:gray;
+ }	
+ 
+ .popupMenu {
+	position:absolute;
+	visibility:hidden;
+	background-color:#F5F7F8;
+	opacity:9;
+	filter: alpha(opacity=90);
+}
+
+.clsFormHeader
+{
+	font-size: 12pt;
+	background-color:#5377A9;
+	font-weight:bold;
+	color:#ffffff;
+	font-family: Verdana,'Times New Roman',Arial;
+}
+.modalBackground {
+	background-color:Olive;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+}
+
+.modalPopup {
+	background-color:#ffffdd;
+	border-width:3px;
+	border-style:solid;
+	border-color:Gray;
+	padding:3px;
+	width:250px;
+}
+

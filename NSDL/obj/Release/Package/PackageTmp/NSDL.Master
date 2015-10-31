@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NSDL.master.cs" Inherits="NSDL.NSDL" %>
+
+<%@ Register Src="~/UserControls/MenuControl.ascx" TagName="Menu" TagPrefix="AspMenu" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head id="Head1" runat="server">
+    <title>Financial Application</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Styles/FinancialApp.css" rel="Stylesheet" type="text/css" />
+    <link href="Styles/KyCDefault.css" rel="Stylesheet" type="text/css" />
+    <link href="Styles/GridviewStylesheet.css" rel="Stylesheet" type="text/css" />
+    <link href="Styles/Chaitanya.css" rel="Stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="divstyle">
+            <table id="tblFrame" width="100%" style="color: #cc3300; height: 1px; background-color: #ffffff" cellspacing="0" cellpadding="0" runat="server">
+                <tr style="color: #000000; background-color: Aqua">
+                    <td style="border-right: white 1pt solid; border-bottom-color: white; border-top-style: none; border-left-style: none; height: 26px; border-bottom-style: inset; width: 502px;">&nbsp;&nbsp;
+	    	<asp:Label ID="lblCompany" Height="10px" Width="250px" ForeColor=" Black" runat="server" Font-Bold="true"
+                Font-Size="9" Font-Names="Arial" EnableViewState="true">
+            </asp:Label>
+                    </td>
+                    <td align="left" style="border-bottom-color: white; width: 15px; border-top-style: none; border-right-style: none; font-family: Times New Roman; border-left-style: none; height: 26px; border-bottom-style: inset">&nbsp;&nbsp;User:&nbsp;&nbsp;</td>
+                    <td align="right" style="border-right: white 1pt solid; border-bottom-color: white; width: 73px; border-top-style: none; border-left-style: none; height: 26px; border-bottom-style: inset">
+                        <asp:Label ID="lblUser" runat="server" CssClass="clsLabel" EnableViewState="true" Width="120px"></asp:Label>
+                    </td>
+                    <td align="center" style="border-right: white 1pt solid; border-bottom-color: white; border-top-style: none; border-left-style: none; height: 26px; border-bottom-style: inset; width: 275px;">
+                        <asp:Label ID="lblDate" runat="server" Font-Bold="true" CssClass="clsLabel" EnableViewState="true">
+                        </asp:Label>
+                    </td>
+                    <td align="left" style="border-bottom-color: white; width: 15px; border-top-style: none; border-right-style: none; border-left-style: none; height: 26px; border-bottom-style: inset">&nbsp;
+                    </td>
+                    <td align="left"></td>
+                    <td>
+                            <asp:ImageButton ID="imgbtnLogOut" ToolTip="Logout" CausesValidation="false" ImageUrl="~/Images/Exit.jpg"
+                                                    runat="server" OnClick="imgbtnLogOut_Click" Height="24px" />
+                    </td>
+                </tr>
+            </table>
+            <table width="100%" align="center">
+                <tr align="center">
+                    <td style="width: 100%" align="center">
+                        <AspMenu:Menu ID="Menu1" runat="server"></AspMenu:Menu>
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td align="right" style="width: 100%">
+                        <strong><em>
+                            <font size="2px" style="color: #004b68; font-weight: bold; font-family: Arial, Helvetica, sans-serif;"></font></em></strong>
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td style="width: 100%" align="center">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

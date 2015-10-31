@@ -1,0 +1,11 @@
+E:\Applications\Chaitu\NSDL\NSDL\obj\Debug\NSDL.csprojResolveAssemblyReference.cache
+E:\Applications\Chaitu\NSDL\NSDL\bin\NSDL.dll
+E:\Applications\Chaitu\NSDL\NSDL\bin\NSDL.pdb
+E:\Applications\Chaitu\NSDL\NSDL\bin\AjaxControlToolkit.dll
+E:\Applications\Chaitu\NSDL\NSDL\bin\EntityFramework.dll
+E:\Applications\Chaitu\NSDL\NSDL\bin\EntityFramework.SqlServer.dll
+E:\Applications\Chaitu\NSDL\NSDL\bin\EntityFramework.xml
+E:\Applications\Chaitu\NSDL\NSDL\bin\EntityFramework.SqlServer.xml
+E:\Applications\Chaitu\NSDL\NSDL\obj\Debug\NSDL.dll
+E:\Applications\Chaitu\NSDL\NSDL\obj\Debug\NSDL.pdb
+E:\Applications\Chaitu\NSDL\NSDL\bin\NSDL.dll.config

@@ -1,0 +1,86 @@
+﻿body
+{
+}
+.TextBOX
+{
+    border : 1px solid #acc6db;
+	background-color : #fff; 
+	font-size : 11px;
+     width:200px;
+	font-family : Verdana, Arial, Helvetica, sans-serif; 
+	color : #000;
+	margin-left: 9px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	}
+.gridview
+{
+  
+    border : 1px solid #acc6db;
+	background-color : #fff; 
+	font-size : 11px;
+     width:100%;
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	margin-right: 3px;
+}
+
+.HeaderStyle
+{
+background-color:#32678A;
+color:#fff;
+font-size : 11px;
+     
+	font-family : Verdana, Arial, Helvetica, sans-serif; 
+	
+	
+}
+.AlertnetColor
+{
+	background-color: #CEDDE8;
+	color: #000000;
+}
+/*AutoComplete flyout */
+
+.autocomplete_completionListElement 
+{  
+	margin : 0px!important;
+	padding:0px 0px 0px;
+	background-color : inherit;
+	color : windowtext;
+	border : buttonshadow;
+	border-width : 1px;
+	border-style : solid;
+	cursor : 'default';
+	overflow : auto;
+	height : 200px;
+    text-align : left; 
+    list-style-type : none;
+    	width: 133px;
+    	
+}
+
+/* AutoComplete highlighted item */
+
+.autocomplete_highlightedListItem
+{
+	background-color: #ffff99;
+	color: black;
+	padding:0px;
+	width: 133px;
+		border-color: inherit;
+	border-width: medium;
+		height: 20px;
+}
+
+/* AutoComplete item */
+
+.autocomplete_listItem 
+{
+	background-color : window;
+	color : windowtext;
+	padding :0px;
+		width: 133px;
+			border-color: inherit;
+	border-width: medium;
+		height: 20px;
+}

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="connection_string-Web.config Connection String" description="connection_string Connection String used in web.config by the application to access the database." defaultValue="Data Source=.;Initial Catalog=Single;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Applications\\Chaitu\\NSDL\\NSDL\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='connection_string']/@connectionString" />
+  </parameter>
+  <parameter name="SingleEntities-Web.config Connection String" description="SingleEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/DBContext.csdl|res://*/DBContext.ssdl|res://*/DBContext.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.;initial catalog=Single;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Applications\\Chaitu\\NSDL\\NSDL\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SingleEntities']/@connectionString" />
+  </parameter>
+</parameters>

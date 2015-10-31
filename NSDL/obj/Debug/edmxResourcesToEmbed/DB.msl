@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SingleModelStoreContainer" CdmEntityContainer="DBConnection_String">
+    <EntitySetMapping Name="Chequemasters">
+      <EntityTypeMapping TypeName="SingleModel.Chequemaster">
+        <MappingFragment StoreEntitySet="Chequemaster">
+          <ScalarProperty Name="chm_cmcd" ColumnName="chm_cmcd" />
+          <ScalarProperty Name="chm_chqno" ColumnName="chm_chqno" />
+          <ScalarProperty Name="chm_instcd" ColumnName="chm_instcd" />
+          <ScalarProperty Name="chm_booksize" ColumnName="chm_booksize" />
+          <ScalarProperty Name="chm_refno" ColumnName="chm_refno" />
+          <ScalarProperty Name="chm_refdate" ColumnName="chm_refdate" />
+          <ScalarProperty Name="chm_status" ColumnName="chm_status" />
+          <ScalarProperty Name="chm_issuedate" ColumnName="chm_issuedate" />
+          <ScalarProperty Name="chm_remarks" ColumnName="chm_remarks" />
+          <ScalarProperty Name="chm_branchcd" ColumnName="chm_branchcd" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="chm_fromno" ColumnName="chm_fromno" />
+          <ScalarProperty Name="chm_tono" ColumnName="chm_tono" />
+          <ScalarProperty Name="chm_type" ColumnName="chm_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Client_master1">
+      <EntityTypeMapping TypeName="SingleModel.Client_master1">
+        <MappingFragment StoreEntitySet="Client_master1">
+          <ScalarProperty Name="cm_brcode" ColumnName="cm_brcode" />
+          <ScalarProperty Name="cm_cd" ColumnName="cm_cd" />
+          <ScalarProperty Name="cm_benttype" ColumnName="cm_benttype" />
+          <ScalarProperty Name="cm_bensubtype" ColumnName="cm_bensubtype" />
+          <ScalarProperty Name="cm_ben_shortname" ColumnName="cm_ben_shortname" />
+          <ScalarProperty Name="cm_ben_acccatorgy" ColumnName="cm_ben_acccatorgy" />
+          <ScalarProperty Name="cm_occup" ColumnName="cm_occup" />
+          <ScalarProperty Name="cm_name" ColumnName="cm_name" />
+          <ScalarProperty Name="cm_filler" ColumnName="cm_filler" />
+          <ScalarProperty Name="cm_fatherhu" ColumnName="cm_fatherhu" />
+          <ScalarProperty Name="cm_add1" ColumnName="cm_add1" />
+          <ScalarProperty Name="cm_add2" ColumnName="cm_add2" />
+          <ScalarProperty Name="cm_add3" ColumnName="cm_add3" />
+          <ScalarProperty Name="cm_add4" ColumnName="cm_add4" />
+          <ScalarProperty Name="cm_pin" ColumnName="cm_pin" />
+          <ScalarProperty Name="cm_tele1" ColumnName="cm_tele1" />
+          <ScalarProperty Name="cm_fax" ColumnName="cm_fax" />
+          <ScalarProperty Name="cm_sech_name" ColumnName="cm_sech_name" />
+          <ScalarProperty Name="cm_sech_fathername" ColumnName="cm_sech_fathername" />
+          <ScalarProperty Name="cm_thih_name" ColumnName="cm_thih_name" />
+          <ScalarProperty Name="cm_thih_fathername" ColumnName="cm_thih_fathername" />
+          <ScalarProperty Name="cm_bp_id" ColumnName="cm_bp_id" />
+          <ScalarProperty Name="cm_addperflag" ColumnName="cm_addperflag" />
+          <ScalarProperty Name="cm_opendate" ColumnName="cm_opendate" />
+          <ScalarProperty Name="cm_filler1" ColumnName="cm_filler1" />
+          <ScalarProperty Name="cm_firstpanno" ColumnName="cm_firstpanno" />
+          <ScalarProperty Name="cm_secpanno" ColumnName="cm_secpanno" />
+          <ScalarProperty Name="cm_thirdpanno" ColumnName="cm_thirdpanno" />
+          <ScalarProperty Name="cm_nomgur_flag" ColumnName="cm_nomgur_flag" />
+          <ScalarProperty Name="cm_nomgur_name" ColumnName="cm_nomgur_name" />
+          <ScalarProperty Name="cm_dobmin" ColumnName="cm_dobmin" />
+          <ScalarProperty Name="cm_nomineeadd1" ColumnName="cm_nomineeadd1" />
+          <ScalarProperty Name="cm_nomineeadd2" ColumnName="cm_nomineeadd2" />
+          <ScalarProperty Name="cm_nomineeadd3" ColumnName="cm_nomineeadd3" />
+          <ScalarProperty Name="cm_nomineeadd4" ColumnName="cm_nomineeadd4" />
+          <ScalarProperty Name="cm_nomineepin" ColumnName="cm_nomineepin" />
+          <ScalarProperty Name="cm_stainst" ColumnName="cm_stainst" />
+          <ScalarProperty Name="cm_rgess" ColumnName="cm_rgess" />
+          <ScalarProperty Name="cm_bsda" ColumnName="cm_bsda" />
+          <ScalarProperty Name="cm_filler2" ColumnName="cm_filler2" />
+          <ScalarProperty Name="cm_bankifscocde" ColumnName="cm_bankifscocde" />
+          <ScalarProperty Name="cm_commdity" ColumnName="cm_commdity" />
+          <ScalarProperty Name="cm_bankacttype" ColumnName="cm_bankacttype" />
+          <ScalarProperty Name="cm_bankname" ColumnName="cm_bankname" />
+          <ScalarProperty Name="cm_bankadd1" ColumnName="cm_bankadd1" />
+          <ScalarProperty Name="cm_bankadd2" ColumnName="cm_bankadd2" />
+          <ScalarProperty Name="cm_bankadd3" ColumnName="cm_bankadd3" />
+          <ScalarProperty Name="cm_bankadd4" ColumnName="cm_bankadd4" />
+          <ScalarProperty Name="cm_bankpin" ColumnName="cm_bankpin" />
+          <ScalarProperty Name="cm_micr" ColumnName="cm_micr" />
+          <ScalarProperty Name="cm_rbi_refno" ColumnName="cm_rbi_refno" />
+          <ScalarProperty Name="cm_rbi_appdate" ColumnName="cm_rbi_appdate" />
+          <ScalarProperty Name="cm_sebireg" ColumnName="cm_sebireg" />
+          <ScalarProperty Name="cm_taxstatus" ColumnName="cm_taxstatus" />
+          <ScalarProperty Name="cm_ben_satus" ColumnName="cm_ben_satus" />
+          <ScalarProperty Name="cm_ben_satatchagecode" ColumnName="cm_ben_satatchagecode" />
+          <ScalarProperty Name="cm_acc_closuredate" ColumnName="cm_acc_closuredate" />
+          <ScalarProperty Name="cm_filler3" ColumnName="cm_filler3" />
+          <ScalarProperty Name="cm_corforadd1" ColumnName="cm_corforadd1" />
+          <ScalarProperty Name="cm_corforadd2" ColumnName="cm_corforadd2" />
+          <ScalarProperty Name="cm_corforadd3" ColumnName="cm_corforadd3" />
+          <ScalarProperty Name="cm_corforadd4" ColumnName="cm_corforadd4" />
+          <ScalarProperty Name="cm_corforpin" ColumnName="cm_corforpin" />
+          <ScalarProperty Name="cm_corfortele1" ColumnName="cm_corfortele1" />
+          <ScalarProperty Name="cm_corforfax" ColumnName="cm_corforfax" />
+          <ScalarProperty Name="cm_minornomineei_ind" ColumnName="cm_minornomineei_ind" />
+          <ScalarProperty Name="cm_minornominee_dob" ColumnName="cm_minornominee_dob" />
+          <ScalarProperty Name="cm_minornomineei_name" ColumnName="cm_minornomineei_name" />
+          <ScalarProperty Name="cm_minornomineei_add1" ColumnName="cm_minornomineei_add1" />
+          <ScalarProperty Name="cm_minornomineei_add2" ColumnName="cm_minornomineei_add2" />
+          <ScalarProperty Name="cm_minornomineei_add3" ColumnName="cm_minornomineei_add3" />
+          <ScalarProperty Name="cm_minornomineei_add4" ColumnName="cm_minornomineei_add4" />
+          <ScalarProperty Name="cm_minornomineei_pin" ColumnName="cm_minornomineei_pin" />
+          <ScalarProperty Name="cm_bankactno" ColumnName="cm_bankactno" />
+          <ScalarProperty Name="cm_email" ColumnName="cm_email" />
+          <ScalarProperty Name="cm_mobile" ColumnName="cm_mobile" />
+          <ScalarProperty Name="cm_filler4" ColumnName="cm_filler4" />
+          <ScalarProperty Name="cm_rtaemai1" ColumnName="cm_rtaemai1" />
+          <ScalarProperty Name="cm_sms" ColumnName="cm_sms" />
+          <ScalarProperty Name="cm_panflag" ColumnName="cm_panflag" />
+          <ScalarProperty Name="cm_auth_flag" ColumnName="cm_auth_flag" />
+          <ScalarProperty Name="cm_nonomniee_flag" ColumnName="cm_nonomniee_flag" />
+          <ScalarProperty Name="cm_filler5" ColumnName="cm_filler5" />
+          <ScalarProperty Name="cm_secondemail" ColumnName="cm_secondemail" />
+          <ScalarProperty Name="cm_second_mobile" ColumnName="cm_second_mobile" />
+          <ScalarProperty Name="cm_filler6" ColumnName="cm_filler6" />
+          <ScalarProperty Name="cm_rtaemail2" ColumnName="cm_rtaemail2" />
+          <ScalarProperty Name="cm_sec_sms" ColumnName="cm_sec_sms" />
+          <ScalarProperty Name="cm_secpan_flag" ColumnName="cm_secpan_flag" />
+          <ScalarProperty Name="cm_secauth_flag" ColumnName="cm_secauth_flag" />
+          <ScalarProperty Name="cm_filler7" ColumnName="cm_filler7" />
+          <ScalarProperty Name="cm_thirdemail" ColumnName="cm_thirdemail" />
+          <ScalarProperty Name="cm_third_mobile" ColumnName="cm_third_mobile" />
+          <ScalarProperty Name="cm_filler8" ColumnName="cm_filler8" />
+          <ScalarProperty Name="cm_rtaemail3" ColumnName="cm_rtaemail3" />
+          <ScalarProperty Name="cm_thir_sms" ColumnName="cm_thir_sms" />
+          <ScalarProperty Name="cm_thirpan_flag" ColumnName="cm_thirpan_flag" />
+          <ScalarProperty Name="cm_thirauth_flag" ColumnName="cm_thirauth_flag" />
+          <ScalarProperty Name="cm_addhar1" ColumnName="cm_addhar1" />
+          <ScalarProperty Name="cm_filler9" ColumnName="cm_filler9" />
+          <ScalarProperty Name="cm_addhar2" ColumnName="cm_addhar2" />
+          <ScalarProperty Name="cm_filler10" ColumnName="cm_filler10" />
+          <ScalarProperty Name="cm_addhar3" ColumnName="cm_addhar3" />
+          <ScalarProperty Name="cm_filler11" ColumnName="cm_filler11" />
+          <ScalarProperty Name="cm_filler12" ColumnName="cm_filler12" />
+          <ScalarProperty Name="cm_brboffcode" ColumnName="cm_brboffcode" />
+          <ScalarProperty Name="cm_groupcd" ColumnName="cm_groupcd" />
+          <ScalarProperty Name="cm_familycd" ColumnName="cm_familycd" />
+          <ScalarProperty Name="cm_introducer" ColumnName="cm_introducer" />
+          <ScalarProperty Name="cm_attorney" ColumnName="cm_attorney" />
+          <ScalarProperty Name="cm_indicator" ColumnName="cm_indicator" />
+          <ScalarProperty Name="cm_add_pref_flag" ColumnName="cm_add_pref_flag" />
+          <ScalarProperty Name="cm_chgsscheme" ColumnName="cm_chgsscheme" />
+          <ScalarProperty Name="cm_billcycle" ColumnName="cm_billcycle" />
+          <ScalarProperty Name="cm_statements" ColumnName="cm_statements" />
+          <ScalarProperty Name="cm_billflag" ColumnName="cm_billflag" />
+          <ScalarProperty Name="cm_billcode" ColumnName="cm_billcode" />
+          <ScalarProperty Name="cm_collectioncode" ColumnName="cm_collectioncode" />
+          <ScalarProperty Name="cm_allowcredit" ColumnName="cm_allowcredit" />
+          <ScalarProperty Name="cm_upfront" ColumnName="cm_upfront" />
+          <ScalarProperty Name="cm_lastbill" ColumnName="cm_lastbill" />
+          <ScalarProperty Name="cm_keepsettlement" ColumnName="cm_keepsettlement" />
+          <ScalarProperty Name="cm_fre_trx" ColumnName="cm_fre_trx" />
+          <ScalarProperty Name="cm_fre_hold" ColumnName="cm_fre_hold" />
+          <ScalarProperty Name="cm_fre_bill" ColumnName="cm_fre_bill" />
+          <ScalarProperty Name="cm_blsavingcd" ColumnName="cm_blsavingcd" />
+          <ScalarProperty Name="cm_amtmntdt" ColumnName="cm_amtmntdt" />
+          <ScalarProperty Name="cm_updatebal" ColumnName="cm_updatebal" />
+          <ScalarProperty Name="cm_schedule" ColumnName="cm_schedule" />
+          <ScalarProperty Name="cm_openingbal" ColumnName="cm_openingbal" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="cm_freezeyn" ColumnName="cm_freezeyn" />
+          <ScalarProperty Name="cm_freezereason" ColumnName="cm_freezereason" />
+          <ScalarProperty Name="cm_PoaForPayin" ColumnName="cm_PoaForPayin" />
+          <ScalarProperty Name="cm_remissier" ColumnName="cm_remissier" />
+          <ScalarProperty Name="cm_remissierscheme" ColumnName="cm_remissierscheme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instrument_master">
+      <EntityTypeMapping TypeName="SingleModel.Instrument_master">
+        <MappingFragment StoreEntitySet="Instrument_master">
+          <ScalarProperty Name="im_instcd" ColumnName="im_instcd" />
+          <ScalarProperty Name="im_desc" ColumnName="im_desc" />
+          <ScalarProperty Name="im_trtype" ColumnName="im_trtype" />
+          <ScalarProperty Name="im_reorderlevel" ColumnName="im_reorderlevel" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="im_defaultyn" ColumnName="im_defaultyn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lot_size">
+      <EntityTypeMapping TypeName="SingleModel.Lot_size">
+        <MappingFragment StoreEntitySet="Lot_size">
+          <ScalarProperty Name="lz_lotno" ColumnName="lz_lotno" />
+          <ScalarProperty Name="lz_type" ColumnName="lz_type" />
+          <ScalarProperty Name="lz_size" ColumnName="lz_size" />
+          <ScalarProperty Name="lz_status" ColumnName="lz_status" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="lz_branchcd" ColumnName="lz_branchcd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vendor_master">
+      <EntityTypeMapping TypeName="SingleModel.Vendor_master">
+        <MappingFragment StoreEntitySet="Vendor_master">
+          <ScalarProperty Name="vm_cd" ColumnName="vm_cd" />
+          <ScalarProperty Name="vm_name" ColumnName="vm_name" />
+          <ScalarProperty Name="vm_add1" ColumnName="vm_add1" />
+          <ScalarProperty Name="vm_add2" ColumnName="vm_add2" />
+          <ScalarProperty Name="vm_add3" ColumnName="vm_add3" />
+          <ScalarProperty Name="vm_add4" ColumnName="vm_add4" />
+          <ScalarProperty Name="vm_pin" ColumnName="vm_pin" />
+          <ScalarProperty Name="vm_tel" ColumnName="vm_tel" />
+          <ScalarProperty Name="vm_email" ColumnName="vm_email" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stock_master">
+      <EntityTypeMapping TypeName="SingleModel.Stock_master">
+        <MappingFragment StoreEntitySet="Stock_master">
+          <ScalarProperty Name="stm_booktono" ColumnName="stm_booktono" />
+          <ScalarProperty Name="stm_bookfromno" ColumnName="stm_bookfromno" />
+          <ScalarProperty Name="stm_vmtype" ColumnName="stm_vmtype" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="stm_noofbooks" ColumnName="stm_noofbooks" />
+          <ScalarProperty Name="stm_booksize" ColumnName="stm_booksize" />
+          <ScalarProperty Name="stm_tono" ColumnName="stm_tono" />
+          <ScalarProperty Name="stm_fromno" ColumnName="stm_fromno" />
+          <ScalarProperty Name="stm_date" ColumnName="stm_date" />
+          <ScalarProperty Name="stm_vmrefno" ColumnName="stm_vmrefno" />
+          <ScalarProperty Name="stm_vmcd" ColumnName="stm_vmcd" />
+          <ScalarProperty Name="stm_instcd" ColumnName="stm_instcd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

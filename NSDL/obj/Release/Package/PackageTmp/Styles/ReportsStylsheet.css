@@ -1,0 +1,27 @@
+﻿
+body 
+{
+      font-family: 'Times New Roman' , Times, serif;
+      font-size: medium;
+      color: #000080;
+      font-weight: bold;
+      text-decoration: underline;
+}
+/* h1 is used in the Page Header Section */
+h1
+{
+      font-family: 'Times New Roman';
+      font-size: x-large;
+      font-weight: bold;
+      color: #008000;
+      background-color: #C0C0C0;
+}
+/*h2 is used for the Group Header Section */
+h2
+{
+      font-family: Arial;
+      font-size: x-large;
+      font-weight: bolder;
+      color: #00FF00;
+      background-color: #000080;
+} 

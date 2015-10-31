@@ -1,0 +1,735 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBContextStoreContainer" CdmEntityContainer="SingleEntities">
+    <EntitySetMapping Name="Bank_master">
+      <EntityTypeMapping TypeName="DBContext.Bank_master">
+        <MappingFragment StoreEntitySet="Bank_master">
+          <ScalarProperty Name="bk_id" ColumnName="bk_id" />
+          <ScalarProperty Name="bk_name" ColumnName="bk_name" />
+          <ScalarProperty Name="bk_branch" ColumnName="bk_branch" />
+          <ScalarProperty Name="bk_ifsccode" ColumnName="bk_ifsccode" />
+          <ScalarProperty Name="bk_micr" ColumnName="bk_micr" />
+          <ScalarProperty Name="bk_add1" ColumnName="bk_add1" />
+          <ScalarProperty Name="bk_add2" ColumnName="bk_add2" />
+          <ScalarProperty Name="bk_add3" ColumnName="bk_add3" />
+          <ScalarProperty Name="bk_add4" ColumnName="bk_add4" />
+          <ScalarProperty Name="bk_pin" ColumnName="bk_pin" />
+          <ScalarProperty Name="bk_filler1" ColumnName="bk_filler1" />
+          <ScalarProperty Name="bk_filler2" ColumnName="bk_filler2" />
+          <ScalarProperty Name="bk_status" ColumnName="bk_status" />
+          <ScalarProperty Name="bk_filler3" ColumnName="bk_filler3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Branch_master">
+      <EntityTypeMapping TypeName="DBContext.Branch_master">
+        <MappingFragment StoreEntitySet="Branch_master">
+          <ScalarProperty Name="bm_branchcd" ColumnName="bm_branchcd" />
+          <ScalarProperty Name="bm_branchname" ColumnName="bm_branchname" />
+          <ScalarProperty Name="bm_contact" ColumnName="bm_contact" />
+          <ScalarProperty Name="bm_add1" ColumnName="bm_add1" />
+          <ScalarProperty Name="bm_add2" ColumnName="bm_add2" />
+          <ScalarProperty Name="bm_add3" ColumnName="bm_add3" />
+          <ScalarProperty Name="bm_city" ColumnName="bm_city" />
+          <ScalarProperty Name="bm_pin" ColumnName="bm_pin" />
+          <ScalarProperty Name="bm_phone" ColumnName="bm_phone" />
+          <ScalarProperty Name="bm_fax" ColumnName="bm_fax" />
+          <ScalarProperty Name="bm_email" ColumnName="bm_email" />
+          <ScalarProperty Name="bm_allow" ColumnName="bm_allow" />
+          <ScalarProperty Name="bm_batchno" ColumnName="bm_batchno" />
+          <ScalarProperty Name="bm_ip_add" ColumnName="bm_ip_add" />
+          <ScalarProperty Name="bm_dialup" ColumnName="bm_dialup" />
+          <ScalarProperty Name="bm_server" ColumnName="bm_server" />
+          <ScalarProperty Name="bm_database" ColumnName="bm_database" />
+          <ScalarProperty Name="bm_dbo" ColumnName="bm_dbo" />
+          <ScalarProperty Name="bm_user" ColumnName="bm_user" />
+          <ScalarProperty Name="bm_pwd" ColumnName="bm_pwd" />
+          <ScalarProperty Name="bm_workarea" ColumnName="bm_workarea" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="bm_percentage" ColumnName="bm_percentage" />
+          <ScalarProperty Name="bm_flag" ColumnName="bm_flag" />
+          <ScalarProperty Name="bm_authorisation" ColumnName="bm_authorisation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chequemasters">
+      <EntityTypeMapping TypeName="DBContext.Chequemaster">
+        <MappingFragment StoreEntitySet="Chequemaster">
+          <ScalarProperty Name="chm_cmcd" ColumnName="chm_cmcd" />
+          <ScalarProperty Name="chm_chqno" ColumnName="chm_chqno" />
+          <ScalarProperty Name="chm_instcd" ColumnName="chm_instcd" />
+          <ScalarProperty Name="chm_booksize" ColumnName="chm_booksize" />
+          <ScalarProperty Name="chm_refno" ColumnName="chm_refno" />
+          <ScalarProperty Name="chm_refdate" ColumnName="chm_refdate" />
+          <ScalarProperty Name="chm_status" ColumnName="chm_status" />
+          <ScalarProperty Name="chm_issuedate" ColumnName="chm_issuedate" />
+          <ScalarProperty Name="chm_remarks" ColumnName="chm_remarks" />
+          <ScalarProperty Name="chm_branchcd" ColumnName="chm_branchcd" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="chm_fromno" ColumnName="chm_fromno" />
+          <ScalarProperty Name="chm_tono" ColumnName="chm_tono" />
+          <ScalarProperty Name="chm_type" ColumnName="chm_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Client_master1">
+      <EntityTypeMapping TypeName="DBContext.Client_master1">
+        <MappingFragment StoreEntitySet="Client_master1">
+          <ScalarProperty Name="cm_brcode" ColumnName="cm_brcode" />
+          <ScalarProperty Name="cm_cd" ColumnName="cm_cd" />
+          <ScalarProperty Name="cm_benttype" ColumnName="cm_benttype" />
+          <ScalarProperty Name="cm_bensubtype" ColumnName="cm_bensubtype" />
+          <ScalarProperty Name="cm_ben_shortname" ColumnName="cm_ben_shortname" />
+          <ScalarProperty Name="cm_ben_acccatorgy" ColumnName="cm_ben_acccatorgy" />
+          <ScalarProperty Name="cm_occup" ColumnName="cm_occup" />
+          <ScalarProperty Name="cm_name" ColumnName="cm_name" />
+          <ScalarProperty Name="cm_filler" ColumnName="cm_filler" />
+          <ScalarProperty Name="cm_fatherhu" ColumnName="cm_fatherhu" />
+          <ScalarProperty Name="cm_add1" ColumnName="cm_add1" />
+          <ScalarProperty Name="cm_add2" ColumnName="cm_add2" />
+          <ScalarProperty Name="cm_add3" ColumnName="cm_add3" />
+          <ScalarProperty Name="cm_add4" ColumnName="cm_add4" />
+          <ScalarProperty Name="cm_pin" ColumnName="cm_pin" />
+          <ScalarProperty Name="cm_tele1" ColumnName="cm_tele1" />
+          <ScalarProperty Name="cm_fax" ColumnName="cm_fax" />
+          <ScalarProperty Name="cm_sech_name" ColumnName="cm_sech_name" />
+          <ScalarProperty Name="cm_sech_fathername" ColumnName="cm_sech_fathername" />
+          <ScalarProperty Name="cm_thih_name" ColumnName="cm_thih_name" />
+          <ScalarProperty Name="cm_thih_fathername" ColumnName="cm_thih_fathername" />
+          <ScalarProperty Name="cm_bp_id" ColumnName="cm_bp_id" />
+          <ScalarProperty Name="cm_addperflag" ColumnName="cm_addperflag" />
+          <ScalarProperty Name="cm_opendate" ColumnName="cm_opendate" />
+          <ScalarProperty Name="cm_filler1" ColumnName="cm_filler1" />
+          <ScalarProperty Name="cm_firstpanno" ColumnName="cm_firstpanno" />
+          <ScalarProperty Name="cm_secpanno" ColumnName="cm_secpanno" />
+          <ScalarProperty Name="cm_thirdpanno" ColumnName="cm_thirdpanno" />
+          <ScalarProperty Name="cm_nomgur_flag" ColumnName="cm_nomgur_flag" />
+          <ScalarProperty Name="cm_nomgur_name" ColumnName="cm_nomgur_name" />
+          <ScalarProperty Name="cm_dobmin" ColumnName="cm_dobmin" />
+          <ScalarProperty Name="cm_nomineeadd1" ColumnName="cm_nomineeadd1" />
+          <ScalarProperty Name="cm_nomineeadd2" ColumnName="cm_nomineeadd2" />
+          <ScalarProperty Name="cm_nomineeadd3" ColumnName="cm_nomineeadd3" />
+          <ScalarProperty Name="cm_nomineeadd4" ColumnName="cm_nomineeadd4" />
+          <ScalarProperty Name="cm_nomineepin" ColumnName="cm_nomineepin" />
+          <ScalarProperty Name="cm_stainst" ColumnName="cm_stainst" />
+          <ScalarProperty Name="cm_rgess" ColumnName="cm_rgess" />
+          <ScalarProperty Name="cm_bsda" ColumnName="cm_bsda" />
+          <ScalarProperty Name="cm_filler2" ColumnName="cm_filler2" />
+          <ScalarProperty Name="cm_bankifscocde" ColumnName="cm_bankifscocde" />
+          <ScalarProperty Name="cm_commdity" ColumnName="cm_commdity" />
+          <ScalarProperty Name="cm_bankacttype" ColumnName="cm_bankacttype" />
+          <ScalarProperty Name="cm_bankname" ColumnName="cm_bankname" />
+          <ScalarProperty Name="cm_bankadd1" ColumnName="cm_bankadd1" />
+          <ScalarProperty Name="cm_bankadd2" ColumnName="cm_bankadd2" />
+          <ScalarProperty Name="cm_bankadd3" ColumnName="cm_bankadd3" />
+          <ScalarProperty Name="cm_bankadd4" ColumnName="cm_bankadd4" />
+          <ScalarProperty Name="cm_bankpin" ColumnName="cm_bankpin" />
+          <ScalarProperty Name="cm_micr" ColumnName="cm_micr" />
+          <ScalarProperty Name="cm_rbi_refno" ColumnName="cm_rbi_refno" />
+          <ScalarProperty Name="cm_rbi_appdate" ColumnName="cm_rbi_appdate" />
+          <ScalarProperty Name="cm_sebireg" ColumnName="cm_sebireg" />
+          <ScalarProperty Name="cm_taxstatus" ColumnName="cm_taxstatus" />
+          <ScalarProperty Name="cm_ben_satus" ColumnName="cm_ben_satus" />
+          <ScalarProperty Name="cm_ben_satatchagecode" ColumnName="cm_ben_satatchagecode" />
+          <ScalarProperty Name="cm_acc_closuredate" ColumnName="cm_acc_closuredate" />
+          <ScalarProperty Name="cm_filler3" ColumnName="cm_filler3" />
+          <ScalarProperty Name="cm_corforadd1" ColumnName="cm_corforadd1" />
+          <ScalarProperty Name="cm_corforadd2" ColumnName="cm_corforadd2" />
+          <ScalarProperty Name="cm_corforadd3" ColumnName="cm_corforadd3" />
+          <ScalarProperty Name="cm_corforadd4" ColumnName="cm_corforadd4" />
+          <ScalarProperty Name="cm_corforpin" ColumnName="cm_corforpin" />
+          <ScalarProperty Name="cm_corfortele1" ColumnName="cm_corfortele1" />
+          <ScalarProperty Name="cm_corforfax" ColumnName="cm_corforfax" />
+          <ScalarProperty Name="cm_minornomineei_ind" ColumnName="cm_minornomineei_ind" />
+          <ScalarProperty Name="cm_minornominee_dob" ColumnName="cm_minornominee_dob" />
+          <ScalarProperty Name="cm_minornomineei_name" ColumnName="cm_minornomineei_name" />
+          <ScalarProperty Name="cm_minornomineei_add1" ColumnName="cm_minornomineei_add1" />
+          <ScalarProperty Name="cm_minornomineei_add2" ColumnName="cm_minornomineei_add2" />
+          <ScalarProperty Name="cm_minornomineei_add3" ColumnName="cm_minornomineei_add3" />
+          <ScalarProperty Name="cm_minornomineei_add4" ColumnName="cm_minornomineei_add4" />
+          <ScalarProperty Name="cm_minornomineei_pin" ColumnName="cm_minornomineei_pin" />
+          <ScalarProperty Name="cm_bankactno" ColumnName="cm_bankactno" />
+          <ScalarProperty Name="cm_email" ColumnName="cm_email" />
+          <ScalarProperty Name="cm_mobile" ColumnName="cm_mobile" />
+          <ScalarProperty Name="cm_filler4" ColumnName="cm_filler4" />
+          <ScalarProperty Name="cm_rtaemai1" ColumnName="cm_rtaemai1" />
+          <ScalarProperty Name="cm_sms" ColumnName="cm_sms" />
+          <ScalarProperty Name="cm_panflag" ColumnName="cm_panflag" />
+          <ScalarProperty Name="cm_auth_flag" ColumnName="cm_auth_flag" />
+          <ScalarProperty Name="cm_nonomniee_flag" ColumnName="cm_nonomniee_flag" />
+          <ScalarProperty Name="cm_filler5" ColumnName="cm_filler5" />
+          <ScalarProperty Name="cm_secondemail" ColumnName="cm_secondemail" />
+          <ScalarProperty Name="cm_second_mobile" ColumnName="cm_second_mobile" />
+          <ScalarProperty Name="cm_filler6" ColumnName="cm_filler6" />
+          <ScalarProperty Name="cm_rtaemail2" ColumnName="cm_rtaemail2" />
+          <ScalarProperty Name="cm_sec_sms" ColumnName="cm_sec_sms" />
+          <ScalarProperty Name="cm_secpan_flag" ColumnName="cm_secpan_flag" />
+          <ScalarProperty Name="cm_secauth_flag" ColumnName="cm_secauth_flag" />
+          <ScalarProperty Name="cm_filler7" ColumnName="cm_filler7" />
+          <ScalarProperty Name="cm_thirdemail" ColumnName="cm_thirdemail" />
+          <ScalarProperty Name="cm_third_mobile" ColumnName="cm_third_mobile" />
+          <ScalarProperty Name="cm_filler8" ColumnName="cm_filler8" />
+          <ScalarProperty Name="cm_rtaemail3" ColumnName="cm_rtaemail3" />
+          <ScalarProperty Name="cm_thir_sms" ColumnName="cm_thir_sms" />
+          <ScalarProperty Name="cm_thirpan_flag" ColumnName="cm_thirpan_flag" />
+          <ScalarProperty Name="cm_thirauth_flag" ColumnName="cm_thirauth_flag" />
+          <ScalarProperty Name="cm_addhar1" ColumnName="cm_addhar1" />
+          <ScalarProperty Name="cm_filler9" ColumnName="cm_filler9" />
+          <ScalarProperty Name="cm_addhar2" ColumnName="cm_addhar2" />
+          <ScalarProperty Name="cm_filler10" ColumnName="cm_filler10" />
+          <ScalarProperty Name="cm_addhar3" ColumnName="cm_addhar3" />
+          <ScalarProperty Name="cm_filler11" ColumnName="cm_filler11" />
+          <ScalarProperty Name="cm_filler12" ColumnName="cm_filler12" />
+          <ScalarProperty Name="cm_brboffcode" ColumnName="cm_brboffcode" />
+          <ScalarProperty Name="cm_groupcd" ColumnName="cm_groupcd" />
+          <ScalarProperty Name="cm_familycd" ColumnName="cm_familycd" />
+          <ScalarProperty Name="cm_introducer" ColumnName="cm_introducer" />
+          <ScalarProperty Name="cm_attorney" ColumnName="cm_attorney" />
+          <ScalarProperty Name="cm_indicator" ColumnName="cm_indicator" />
+          <ScalarProperty Name="cm_add_pref_flag" ColumnName="cm_add_pref_flag" />
+          <ScalarProperty Name="cm_chgsscheme" ColumnName="cm_chgsscheme" />
+          <ScalarProperty Name="cm_billcycle" ColumnName="cm_billcycle" />
+          <ScalarProperty Name="cm_statements" ColumnName="cm_statements" />
+          <ScalarProperty Name="cm_billflag" ColumnName="cm_billflag" />
+          <ScalarProperty Name="cm_billcode" ColumnName="cm_billcode" />
+          <ScalarProperty Name="cm_collectioncode" ColumnName="cm_collectioncode" />
+          <ScalarProperty Name="cm_allowcredit" ColumnName="cm_allowcredit" />
+          <ScalarProperty Name="cm_upfront" ColumnName="cm_upfront" />
+          <ScalarProperty Name="cm_lastbill" ColumnName="cm_lastbill" />
+          <ScalarProperty Name="cm_keepsettlement" ColumnName="cm_keepsettlement" />
+          <ScalarProperty Name="cm_fre_trx" ColumnName="cm_fre_trx" />
+          <ScalarProperty Name="cm_fre_hold" ColumnName="cm_fre_hold" />
+          <ScalarProperty Name="cm_fre_bill" ColumnName="cm_fre_bill" />
+          <ScalarProperty Name="cm_blsavingcd" ColumnName="cm_blsavingcd" />
+          <ScalarProperty Name="cm_amtmntdt" ColumnName="cm_amtmntdt" />
+          <ScalarProperty Name="cm_updatebal" ColumnName="cm_updatebal" />
+          <ScalarProperty Name="cm_schedule" ColumnName="cm_schedule" />
+          <ScalarProperty Name="cm_openingbal" ColumnName="cm_openingbal" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="cm_freezeyn" ColumnName="cm_freezeyn" />
+          <ScalarProperty Name="cm_freezereason" ColumnName="cm_freezereason" />
+          <ScalarProperty Name="cm_PoaForPayin" ColumnName="cm_PoaForPayin" />
+          <ScalarProperty Name="cm_remissier" ColumnName="cm_remissier" />
+          <ScalarProperty Name="cm_remissierscheme" ColumnName="cm_remissierscheme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instrument_master">
+      <EntityTypeMapping TypeName="DBContext.Instrument_master">
+        <MappingFragment StoreEntitySet="Instrument_master">
+          <ScalarProperty Name="im_instcd" ColumnName="im_instcd" />
+          <ScalarProperty Name="im_desc" ColumnName="im_desc" />
+          <ScalarProperty Name="im_trtype" ColumnName="im_trtype" />
+          <ScalarProperty Name="im_reorderlevel" ColumnName="im_reorderlevel" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="im_defaultyn" ColumnName="im_defaultyn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stock_master">
+      <EntityTypeMapping TypeName="DBContext.Stock_master">
+        <MappingFragment StoreEntitySet="Stock_master">
+          <ScalarProperty Name="stm_instcd" ColumnName="stm_instcd" />
+          <ScalarProperty Name="stm_vmcd" ColumnName="stm_vmcd" />
+          <ScalarProperty Name="stm_vmrefno" ColumnName="stm_vmrefno" />
+          <ScalarProperty Name="stm_date" ColumnName="stm_date" />
+          <ScalarProperty Name="stm_fromno" ColumnName="stm_fromno" />
+          <ScalarProperty Name="stm_tono" ColumnName="stm_tono" />
+          <ScalarProperty Name="stm_booksize" ColumnName="stm_booksize" />
+          <ScalarProperty Name="stm_noofbooks" ColumnName="stm_noofbooks" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="stm_vmtype" ColumnName="stm_vmtype" />
+          <ScalarProperty Name="stm_bookfromno" ColumnName="stm_bookfromno" />
+          <ScalarProperty Name="stm_booktono" ColumnName="stm_booktono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lot_size">
+      <EntityTypeMapping TypeName="DBContext.Lot_size">
+        <MappingFragment StoreEntitySet="Lot_size">
+          <ScalarProperty Name="lz_lotno" ColumnName="lz_lotno" />
+          <ScalarProperty Name="lz_type" ColumnName="lz_type" />
+          <ScalarProperty Name="lz_size" ColumnName="lz_size" />
+          <ScalarProperty Name="lz_status" ColumnName="lz_status" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="lz_branchcd" ColumnName="lz_branchcd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vendor_master">
+      <EntityTypeMapping TypeName="DBContext.Vendor_master">
+        <MappingFragment StoreEntitySet="Vendor_master">
+          <ScalarProperty Name="vm_cd" ColumnName="vm_cd" />
+          <ScalarProperty Name="vm_name" ColumnName="vm_name" />
+          <ScalarProperty Name="vm_add1" ColumnName="vm_add1" />
+          <ScalarProperty Name="vm_add2" ColumnName="vm_add2" />
+          <ScalarProperty Name="vm_add3" ColumnName="vm_add3" />
+          <ScalarProperty Name="vm_add4" ColumnName="vm_add4" />
+          <ScalarProperty Name="vm_pin" ColumnName="vm_pin" />
+          <ScalarProperty Name="vm_tel" ColumnName="vm_tel" />
+          <ScalarProperty Name="vm_email" ColumnName="vm_email" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Book_size">
+      <EntityTypeMapping TypeName="DBContext.Book_size">
+        <MappingFragment StoreEntitySet="Book_size">
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="bk_size" ColumnName="bk_size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inward_entry">
+      <EntityTypeMapping TypeName="DBContext.Inward_entry">
+        <MappingFragment StoreEntitySet="Inward_entry">
+          <ScalarProperty Name="ie_ref" ColumnName="ie_ref" />
+          <ScalarProperty Name="ie_branchcd" ColumnName="ie_branchcd" />
+          <ScalarProperty Name="ie_pri_key" ColumnName="ie_pri_key" />
+          <ScalarProperty Name="ie_remark" ColumnName="ie_remark" />
+          <ScalarProperty Name="ie_mode" ColumnName="ie_mode" />
+          <ScalarProperty Name="ie_charge" ColumnName="ie_charge" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="ie_scrollno" ColumnName="ie_scrollno" />
+          <ScalarProperty Name="ie_rejected" ColumnName="ie_rejected" />
+          <ScalarProperty Name="ie_noofcert" ColumnName="ie_noofcert" />
+          <ScalarProperty Name="ie_nooftrx" ColumnName="ie_nooftrx" />
+          <ScalarProperty Name="ie_execdt" ColumnName="ie_execdt" />
+          <ScalarProperty Name="ie_dt" ColumnName="ie_dt" />
+          <ScalarProperty Name="ie_cmcd" ColumnName="ie_cmcd" />
+          <ScalarProperty Name="ie_slipno" ColumnName="ie_slipno" />
+          <ScalarProperty Name="ie_instno" ColumnName="ie_instno" />
+          <ScalarProperty Name="ie_trxtype" ColumnName="ie_trxtype" />
+          <ScalarProperty Name="ie_lotno" ColumnName="ie_lotno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetRecievedIn" FunctionName="DBContext.Store.GetRecievedIn">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBContext.GetRecievedIn_Result">
+          <ScalarProperty Name="cm_cd" ColumnName="cm_cd" />
+          <ScalarProperty Name="cm_name" ColumnName="cm_name" />
+          <ScalarProperty Name="Amt" ColumnName="Amt" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Trxbackoffices">
+      <EntityTypeMapping TypeName="DBContext.Trxbackoffice">
+        <MappingFragment StoreEntitySet="Trxbackoffice">
+          <ScalarProperty Name="tb_lotno" ColumnName="tb_lotno" />
+          <ScalarProperty Name="tb_entrymode" ColumnName="tb_entrymode" />
+          <ScalarProperty Name="tb_recoslipyn" ColumnName="tb_recoslipyn" />
+          <ScalarProperty Name="tb_instreceivemode" ColumnName="tb_instreceivemode" />
+          <ScalarProperty Name="tb_authtm3" ColumnName="tb_authtm3" />
+          <ScalarProperty Name="tb_authtm2" ColumnName="tb_authtm2" />
+          <ScalarProperty Name="tb_authtm1" ColumnName="tb_authtm1" />
+          <ScalarProperty Name="mkrtm" ColumnName="mkrtm" />
+          <ScalarProperty Name="tb_remark" ColumnName="tb_remark" />
+          <ScalarProperty Name="tb_exec_date" ColumnName="tb_exec_date" />
+          <ScalarProperty Name="tb_tradeno" ColumnName="tb_tradeno" />
+          <ScalarProperty Name="tb_serialno" ColumnName="tb_serialno" />
+          <ScalarProperty Name="tb_obligationid" ColumnName="tb_obligationid" />
+          <ScalarProperty Name="tb_scrollno" ColumnName="tb_scrollno" />
+          <ScalarProperty Name="tb_authremarks" ColumnName="tb_authremarks" />
+          <ScalarProperty Name="tb_authdt3" ColumnName="tb_authdt3" />
+          <ScalarProperty Name="tb_authuserid3" ColumnName="tb_authuserid3" />
+          <ScalarProperty Name="tb_authcode3" ColumnName="tb_authcode3" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="tb_rejreason" ColumnName="tb_rejreason" />
+          <ScalarProperty Name="tb_reasfortrade" ColumnName="tb_reasfortrade" />
+          <ScalarProperty Name="tb_cash" ColumnName="tb_cash" />
+          <ScalarProperty Name="tb_branchbatchcd" ColumnName="tb_branchbatchcd" />
+          <ScalarProperty Name="tb_branchcd" ColumnName="tb_branchcd" />
+          <ScalarProperty Name="tb_batch_no" ColumnName="tb_batch_no" />
+          <ScalarProperty Name="tb_authdt2" ColumnName="tb_authdt2" />
+          <ScalarProperty Name="tb_authuserid2" ColumnName="tb_authuserid2" />
+          <ScalarProperty Name="tb_authcode2" ColumnName="tb_authcode2" />
+          <ScalarProperty Name="tb_authdt1" ColumnName="tb_authdt1" />
+          <ScalarProperty Name="tb_authuserid1" ColumnName="tb_authuserid1" />
+          <ScalarProperty Name="tb_authcode1" ColumnName="tb_authcode1" />
+          <ScalarProperty Name="tb_trx_allow" ColumnName="tb_trx_allow" />
+          <ScalarProperty Name="tb_status" ColumnName="tb_status" />
+          <ScalarProperty Name="tb_br_pri_key" ColumnName="tb_br_pri_key" />
+          <ScalarProperty Name="tb_irre_code4" ColumnName="tb_irre_code4" />
+          <ScalarProperty Name="tb_irre_code3" ColumnName="tb_irre_code3" />
+          <ScalarProperty Name="tb_irre_code2" ColumnName="tb_irre_code2" />
+          <ScalarProperty Name="tb_irre_code1" ColumnName="tb_irre_code1" />
+          <ScalarProperty Name="tb_reference" ColumnName="tb_reference" />
+          <ScalarProperty Name="tb_br_code" ColumnName="tb_br_code" />
+          <ScalarProperty Name="tb_other_settle_no" ColumnName="tb_other_settle_no" />
+          <ScalarProperty Name="tb_other_markettype" ColumnName="tb_other_markettype" />
+          <ScalarProperty Name="tb_other_cmbp_id" ColumnName="tb_other_cmbp_id" />
+          <ScalarProperty Name="tb_other_client_id" ColumnName="tb_other_client_id" />
+          <ScalarProperty Name="tb_other_dp_id" ColumnName="tb_other_dp_id" />
+          <ScalarProperty Name="tb_chid" ColumnName="tb_chid" />
+          <ScalarProperty Name="tb_exchangeid" ColumnName="tb_exchangeid" />
+          <ScalarProperty Name="tb_settlement" ColumnName="tb_settlement" />
+          <ScalarProperty Name="tb_market_type" ColumnName="tb_market_type" />
+          <ScalarProperty Name="tb_qty" ColumnName="tb_qty" />
+          <ScalarProperty Name="tb_isin" ColumnName="tb_isin" />
+          <ScalarProperty Name="tb_client_id" ColumnName="tb_client_id" />
+          <ScalarProperty Name="tb_trx_flag" ColumnName="tb_trx_flag" />
+          <ScalarProperty Name="tb_trx_date" ColumnName="tb_trx_date" />
+          <ScalarProperty Name="tb_trx_type" ColumnName="tb_trx_type" />
+          <ScalarProperty Name="tb_instcd" ColumnName="tb_instcd" />
+          <ScalarProperty Name="tb_internal_refno" ColumnName="tb_internal_refno" />
+          <ScalarProperty Name="tb_pri_key" ColumnName="tb_pri_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Securities">
+      <EntityTypeMapping TypeName="DBContext.Security">
+        <MappingFragment StoreEntitySet="Security">
+          <ScalarProperty Name="sc_sector" ColumnName="sc_sector" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="sc_corporateaction" ColumnName="sc_corporateaction" />
+          <ScalarProperty Name="sc_rolling" ColumnName="sc_rolling" />
+          <ScalarProperty Name="sc_rate" ColumnName="sc_rate" />
+          <ScalarProperty Name="sc_sl_balance" ColumnName="sc_sl_balance" />
+          <ScalarProperty Name="sc_attn" ColumnName="sc_attn" />
+          <ScalarProperty Name="sc_nsesrs" ColumnName="sc_nsesrs" />
+          <ScalarProperty Name="sc_nsesym" ColumnName="sc_nsesym" />
+          <ScalarProperty Name="sc_bsecd" ColumnName="sc_bsecd" />
+          <ScalarProperty Name="sc_reg_name" ColumnName="sc_reg_name" />
+          <ScalarProperty Name="sc_reg_code" ColumnName="sc_reg_code" />
+          <ScalarProperty Name="sc_decimal_allow" ColumnName="sc_decimal_allow" />
+          <ScalarProperty Name="sc_security_remark" ColumnName="sc_security_remark" />
+          <ScalarProperty Name="sc_security_status" ColumnName="sc_security_status" />
+          <ScalarProperty Name="sc_agentname" ColumnName="sc_agentname" />
+          <ScalarProperty Name="sc_convert_amount" ColumnName="sc_convert_amount" />
+          <ScalarProperty Name="sc_face_value" ColumnName="sc_face_value" />
+          <ScalarProperty Name="sc_convert_date" ColumnName="sc_convert_date" />
+          <ScalarProperty Name="sc_maturity_date" ColumnName="sc_maturity_date" />
+          <ScalarProperty Name="sc_issue" ColumnName="sc_issue" />
+          <ScalarProperty Name="sc_security_subtype" ColumnName="sc_security_subtype" />
+          <ScalarProperty Name="sc_security_type" ColumnName="sc_security_type" />
+          <ScalarProperty Name="sc_company_name" ColumnName="sc_company_name" />
+          <ScalarProperty Name="sc_company_code" ColumnName="sc_company_code" />
+          <ScalarProperty Name="sc_isinname" ColumnName="sc_isinname" />
+          <ScalarProperty Name="sc_book_basis" ColumnName="sc_book_basis" />
+          <ScalarProperty Name="sc_nsecurity_code" ColumnName="sc_nsecurity_code" />
+          <ScalarProperty Name="sc_isincode" ColumnName="sc_isincode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sysparameters">
+      <EntityTypeMapping TypeName="DBContext.Sysparameter">
+        <MappingFragment StoreEntitySet="Sysparameter">
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="sp_Securedyn" ColumnName="sp_Securedyn" />
+          <ScalarProperty Name="sp_sysvalue" ColumnName="sp_sysvalue" />
+          <ScalarProperty Name="sp_table" ColumnName="sp_table" />
+          <ScalarProperty Name="sp_datalen" ColumnName="sp_datalen" />
+          <ScalarProperty Name="sp_datatype" ColumnName="sp_datatype" />
+          <ScalarProperty Name="sp_name" ColumnName="sp_name" />
+          <ScalarProperty Name="sp_effdt" ColumnName="sp_effdt" />
+          <ScalarProperty Name="sp_parmcd" ColumnName="sp_parmcd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reasonfortrades">
+      <EntityTypeMapping TypeName="DBContext.Reasonfortrade">
+        <MappingFragment StoreEntitySet="Reasonfortrade">
+          <ScalarProperty Name="rt_desc" ColumnName="rt_desc" />
+          <ScalarProperty Name="rt_code" ColumnName="rt_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bpmasters">
+      <EntityTypeMapping TypeName="DBContext.Bpmaster">
+        <MappingFragment StoreEntitySet="Bpmaster">
+          <ScalarProperty Name="bp_stat" ColumnName="bp_stat" />
+          <ScalarProperty Name="bp_name" ColumnName="bp_name" />
+          <ScalarProperty Name="bp_category" ColumnName="bp_category" />
+          <ScalarProperty Name="bp_assd_cc_cmid" ColumnName="bp_assd_cc_cmid" />
+          <ScalarProperty Name="bp_assd_dp_id" ColumnName="bp_assd_dp_id" />
+          <ScalarProperty Name="bp_assd_cc_id" ColumnName="bp_assd_cc_id" />
+          <ScalarProperty Name="bp_fax" ColumnName="bp_fax" />
+          <ScalarProperty Name="bp_phone" ColumnName="bp_phone" />
+          <ScalarProperty Name="bp_pin" ColumnName="bp_pin" />
+          <ScalarProperty Name="bp_add4" ColumnName="bp_add4" />
+          <ScalarProperty Name="bp_add3" ColumnName="bp_add3" />
+          <ScalarProperty Name="bp_add2" ColumnName="bp_add2" />
+          <ScalarProperty Name="bp_add1" ColumnName="bp_add1" />
+          <ScalarProperty Name="bp_role" ColumnName="bp_role" />
+          <ScalarProperty Name="bp_id" ColumnName="bp_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cc_calender">
+      <EntityTypeMapping TypeName="DBContext.Cc_calender">
+        <MappingFragment StoreEntitySet="Cc_calender">
+          <ScalarProperty Name="cc_payout_dt" ColumnName="cc_payout_dt" />
+          <ScalarProperty Name="cc_payin_dt" ColumnName="cc_payin_dt" />
+          <ScalarProperty Name="cc_nsdl_deadlinett" ColumnName="cc_nsdl_deadlinett" />
+          <ScalarProperty Name="cc_nsdl_deadlinedt" ColumnName="cc_nsdl_deadlinedt" />
+          <ScalarProperty Name="cc_settle_periodto" ColumnName="cc_settle_periodto" />
+          <ScalarProperty Name="cc_settle_periodfrom" ColumnName="cc_settle_periodfrom" />
+          <ScalarProperty Name="cc_settle_no" ColumnName="cc_settle_no" />
+          <ScalarProperty Name="cc_mkt_type" ColumnName="cc_mkt_type" />
+          <ScalarProperty Name="cc_id" ColumnName="cc_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chequestops">
+      <EntityTypeMapping TypeName="DBContext.Chequestop">
+        <MappingFragment StoreEntitySet="Chequestop">
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="chs_remark" ColumnName="chs_remark" />
+          <ScalarProperty Name="chs_instcd" ColumnName="chs_instcd" />
+          <ScalarProperty Name="chs_date" ColumnName="chs_date" />
+          <ScalarProperty Name="chs_status" ColumnName="chs_status" />
+          <ScalarProperty Name="chs_refdate" ColumnName="chs_refdate" />
+          <ScalarProperty Name="chs_reference" ColumnName="chs_reference" />
+          <ScalarProperty Name="chs_chqdate" ColumnName="chs_chqdate" />
+          <ScalarProperty Name="chs_chqno" ColumnName="chs_chqno" />
+          <ScalarProperty Name="chs_cmcd" ColumnName="chs_cmcd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rate_master">
+      <EntityTypeMapping TypeName="DBContext.Rate_master">
+        <MappingFragment StoreEntitySet="Rate_master">
+          <ScalarProperty Name="rm_rate" ColumnName="rm_rate" />
+          <ScalarProperty Name="rm_trx_date" ColumnName="rm_trx_date" />
+          <ScalarProperty Name="rm_isin_code" ColumnName="rm_isin_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Used_slip">
+      <EntityTypeMapping TypeName="DBContext.Used_slip">
+        <MappingFragment StoreEntitySet="Used_slip">
+          <ScalarProperty Name="mkrtm" ColumnName="mkrtm" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="us_filler1" ColumnName="us_filler1" />
+          <ScalarProperty Name="us_archiveyn" ColumnName="us_archiveyn" />
+          <ScalarProperty Name="us_remarks" ColumnName="us_remarks" />
+          <ScalarProperty Name="us_mode" ColumnName="us_mode" />
+          <ScalarProperty Name="us_execdt" ColumnName="us_execdt" />
+          <ScalarProperty Name="us_clientcd" ColumnName="us_clientcd" />
+          <ScalarProperty Name="us_irn" ColumnName="us_irn" />
+          <ScalarProperty Name="us_instcd" ColumnName="us_instcd" />
+          <ScalarProperty Name="us_trxtype" ColumnName="us_trxtype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Auth_master">
+      <EntityTypeMapping TypeName="DBContext.Auth_master">
+        <MappingFragment StoreEntitySet="Auth_master">
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="am_group3" ColumnName="am_group3" />
+          <ScalarProperty Name="am_group2" ColumnName="am_group2" />
+          <ScalarProperty Name="am_group1" ColumnName="am_group1" />
+          <ScalarProperty Name="am_amount" ColumnName="am_amount" />
+          <ScalarProperty Name="am_code" ColumnName="am_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Backoffice_balance">
+      <EntityTypeMapping TypeName="DBContext.Backoffice_balance">
+        <MappingFragment StoreEntitySet="Backoffice_balance">
+          <ScalarProperty Name="bc_mkrdt" ColumnName="bc_mkrdt" />
+          <ScalarProperty Name="bc_mkrid" ColumnName="bc_mkrid" />
+          <ScalarProperty Name="bc_ledger" ColumnName="bc_ledger" />
+          <ScalarProperty Name="bc_cmcd" ColumnName="bc_cmcd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Backoffice_audit">
+      <EntityTypeMapping TypeName="DBContext.Backoffice_audit">
+        <MappingFragment StoreEntitySet="Backoffice_audit">
+          <ScalarProperty Name="mkrdtold" ColumnName="mkrdtold" />
+          <ScalarProperty Name="mkridold" ColumnName="mkridold" />
+          <ScalarProperty Name="mkrtmold" ColumnName="mkrtmold" />
+          <ScalarProperty Name="ba_delunique" ColumnName="ba_delunique" />
+          <ScalarProperty Name="mkrtm" ColumnName="mkrtm" />
+          <ScalarProperty Name="ba_computername" ColumnName="ba_computername" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="ba_newvalue" ColumnName="ba_newvalue" />
+          <ScalarProperty Name="ba_oldvalue" ColumnName="ba_oldvalue" />
+          <ScalarProperty Name="ba_field" ColumnName="ba_field" />
+          <ScalarProperty Name="ba_branchcd" ColumnName="ba_branchcd" />
+          <ScalarProperty Name="ba_pri_key" ColumnName="ba_pri_key" />
+          <ScalarProperty Name="ba_trx_type" ColumnName="ba_trx_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Backoffice_delete">
+      <EntityTypeMapping TypeName="DBContext.Backoffice_delete">
+        <MappingFragment StoreEntitySet="Backoffice_delete">
+          <ScalarProperty Name="mkrdtold" ColumnName="mkrdtold" />
+          <ScalarProperty Name="bd_authtm3" ColumnName="bd_authtm3" />
+          <ScalarProperty Name="bd_authtm2" ColumnName="bd_authtm2" />
+          <ScalarProperty Name="bd_authtm1" ColumnName="bd_authtm1" />
+          <ScalarProperty Name="mkridold" ColumnName="mkridold" />
+          <ScalarProperty Name="mkrtmold" ColumnName="mkrtmold" />
+          <ScalarProperty Name="bd_unique" ColumnName="bd_unique" />
+          <ScalarProperty Name="mkrtm" ColumnName="mkrtm" />
+          <ScalarProperty Name="bd_computername" ColumnName="bd_computername" />
+          <ScalarProperty Name="bd_totalcertificate" ColumnName="bd_totalcertificate" />
+          <ScalarProperty Name="bd_scrollno" ColumnName="bd_scrollno" />
+          <ScalarProperty Name="bd_authremarks" ColumnName="bd_authremarks" />
+          <ScalarProperty Name="bd_authdt3" ColumnName="bd_authdt3" />
+          <ScalarProperty Name="bd_authuserid3" ColumnName="bd_authuserid3" />
+          <ScalarProperty Name="bd_authcode3" ColumnName="bd_authcode3" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="bd_branchbatchcd" ColumnName="bd_branchbatchcd" />
+          <ScalarProperty Name="bd_branchcd" ColumnName="bd_branchcd" />
+          <ScalarProperty Name="bd_authdt2" ColumnName="bd_authdt2" />
+          <ScalarProperty Name="bd_authuserid2" ColumnName="bd_authuserid2" />
+          <ScalarProperty Name="bd_authcode2" ColumnName="bd_authcode2" />
+          <ScalarProperty Name="bd_authdt1" ColumnName="bd_authdt1" />
+          <ScalarProperty Name="bd_authuserid1" ColumnName="bd_authuserid1" />
+          <ScalarProperty Name="bd_authcode1" ColumnName="bd_authcode1" />
+          <ScalarProperty Name="bd_pri_key" ColumnName="bd_pri_key" />
+          <ScalarProperty Name="bd_trx_allow" ColumnName="bd_trx_allow" />
+          <ScalarProperty Name="bd_status" ColumnName="bd_status" />
+          <ScalarProperty Name="bd_cc_id2" ColumnName="bd_cc_id2" />
+          <ScalarProperty Name="bd_cc_id1" ColumnName="bd_cc_id1" />
+          <ScalarProperty Name="bd_lock_release_date" ColumnName="bd_lock_release_date" />
+          <ScalarProperty Name="bd_lock_release_code" ColumnName="bd_lock_release_code" />
+          <ScalarProperty Name="bd_other_settle_no" ColumnName="bd_other_settle_no" />
+          <ScalarProperty Name="bd_other_markettype" ColumnName="bd_other_markettype" />
+          <ScalarProperty Name="bd_internal_refno" ColumnName="bd_internal_refno" />
+          <ScalarProperty Name="bd_other_cmbp_id" ColumnName="bd_other_cmbp_id" />
+          <ScalarProperty Name="bd_other_client_id" ColumnName="bd_other_client_id" />
+          <ScalarProperty Name="bd_other_dp_id" ColumnName="bd_other_dp_id" />
+          <ScalarProperty Name="bd_execution_date" ColumnName="bd_execution_date" />
+          <ScalarProperty Name="bd_settlement" ColumnName="bd_settlement" />
+          <ScalarProperty Name="bd_market_type" ColumnName="bd_market_type" />
+          <ScalarProperty Name="bd_qty" ColumnName="bd_qty" />
+          <ScalarProperty Name="bd_isin" ColumnName="bd_isin" />
+          <ScalarProperty Name="bd_client_id" ColumnName="bd_client_id" />
+          <ScalarProperty Name="bd_trx_date" ColumnName="bd_trx_date" />
+          <ScalarProperty Name="bd_trx_type" ColumnName="bd_trx_type" />
+          <ScalarProperty Name="bd_instdesc" ColumnName="bd_instdesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Interdepositories">
+      <EntityTypeMapping TypeName="DBContext.Interdepository">
+        <MappingFragment StoreEntitySet="Interdepository">
+          <ScalarProperty Name="id_CDSLsettlement" ColumnName="id_CDSLsettlement" />
+          <ScalarProperty Name="id_remarks" ColumnName="id_remarks" />
+          <ScalarProperty Name="id_entrymode" ColumnName="id_entrymode" />
+          <ScalarProperty Name="id_recoslipyn" ColumnName="id_recoslipyn" />
+          <ScalarProperty Name="id_instreceivemode" ColumnName="id_instreceivemode" />
+          <ScalarProperty Name="mkrtm" ColumnName="mkrtm" />
+          <ScalarProperty Name="id_authtm3" ColumnName="id_authtm3" />
+          <ScalarProperty Name="id_authtm2" ColumnName="id_authtm2" />
+          <ScalarProperty Name="id_authtm1" ColumnName="id_authtm1" />
+          <ScalarProperty Name="id_lotno" ColumnName="id_lotno" />
+          <ScalarProperty Name="id_dqty" ColumnName="id_dqty" />
+          <ScalarProperty Name="id_scrollno" ColumnName="id_scrollno" />
+          <ScalarProperty Name="id_authremarks" ColumnName="id_authremarks" />
+          <ScalarProperty Name="id_authdt3" ColumnName="id_authdt3" />
+          <ScalarProperty Name="id_authuserid3" ColumnName="id_authuserid3" />
+          <ScalarProperty Name="id_authcode3" ColumnName="id_authcode3" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="id_branchbatchcd" ColumnName="id_branchbatchcd" />
+          <ScalarProperty Name="id_branchcd" ColumnName="id_branchcd" />
+          <ScalarProperty Name="id_pri_key" ColumnName="id_pri_key" />
+          <ScalarProperty Name="id_batch_no" ColumnName="id_batch_no" />
+          <ScalarProperty Name="id_authdate2" ColumnName="id_authdate2" />
+          <ScalarProperty Name="id_authuserid2" ColumnName="id_authuserid2" />
+          <ScalarProperty Name="id_authcode2" ColumnName="id_authcode2" />
+          <ScalarProperty Name="id_authdate1" ColumnName="id_authdate1" />
+          <ScalarProperty Name="id_authuserid1" ColumnName="id_authuserid1" />
+          <ScalarProperty Name="id_authcode1" ColumnName="id_authcode1" />
+          <ScalarProperty Name="id_othersettlement" ColumnName="id_othersettlement" />
+          <ScalarProperty Name="id_allow" ColumnName="id_allow" />
+          <ScalarProperty Name="id_status" ColumnName="id_status" />
+          <ScalarProperty Name="id_cc_id" ColumnName="id_cc_id" />
+          <ScalarProperty Name="id_internalrefno" ColumnName="id_internalrefno" />
+          <ScalarProperty Name="id_otherdpid" ColumnName="id_otherdpid" />
+          <ScalarProperty Name="id_otherclientid" ColumnName="id_otherclientid" />
+          <ScalarProperty Name="id_executiondate" ColumnName="id_executiondate" />
+          <ScalarProperty Name="id_settlementno" ColumnName="id_settlementno" />
+          <ScalarProperty Name="id_mkttype" ColumnName="id_mkttype" />
+          <ScalarProperty Name="id_qty" ColumnName="id_qty" />
+          <ScalarProperty Name="id_isin" ColumnName="id_isin" />
+          <ScalarProperty Name="id_clientid" ColumnName="id_clientid" />
+          <ScalarProperty Name="id_trxflag" ColumnName="id_trxflag" />
+          <ScalarProperty Name="id_trxtype" ColumnName="id_trxtype" />
+          <ScalarProperty Name="id_trxdate" ColumnName="id_trxdate" />
+          <ScalarProperty Name="id_instcd" ColumnName="id_instcd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Interdepository_auth">
+      <EntityTypeMapping TypeName="DBContext.Interdepository_auth">
+        <MappingFragment StoreEntitySet="Interdepository_auth">
+          <ScalarProperty Name="id_entrymode" ColumnName="id_entrymode" />
+          <ScalarProperty Name="id_recoslipyn" ColumnName="id_recoslipyn" />
+          <ScalarProperty Name="id_instreceivemode" ColumnName="id_instreceivemode" />
+          <ScalarProperty Name="mkrtm" ColumnName="mkrtm" />
+          <ScalarProperty Name="id_authtm3" ColumnName="id_authtm3" />
+          <ScalarProperty Name="id_authtm2" ColumnName="id_authtm2" />
+          <ScalarProperty Name="id_authtm1" ColumnName="id_authtm1" />
+          <ScalarProperty Name="id_lotno" ColumnName="id_lotno" />
+          <ScalarProperty Name="id_dqty" ColumnName="id_dqty" />
+          <ScalarProperty Name="id_scrollno" ColumnName="id_scrollno" />
+          <ScalarProperty Name="id_authremarks" ColumnName="id_authremarks" />
+          <ScalarProperty Name="id_authdt3" ColumnName="id_authdt3" />
+          <ScalarProperty Name="id_authuserid3" ColumnName="id_authuserid3" />
+          <ScalarProperty Name="id_authcode3" ColumnName="id_authcode3" />
+          <ScalarProperty Name="mkrdt" ColumnName="mkrdt" />
+          <ScalarProperty Name="mkrid" ColumnName="mkrid" />
+          <ScalarProperty Name="id_branchbatchcd" ColumnName="id_branchbatchcd" />
+          <ScalarProperty Name="id_branchcd" ColumnName="id_branchcd" />
+          <ScalarProperty Name="id_pri_key" ColumnName="id_pri_key" />
+          <ScalarProperty Name="id_batch_no" ColumnName="id_batch_no" />
+          <ScalarProperty Name="id_authdate2" ColumnName="id_authdate2" />
+          <ScalarProperty Name="id_authuserid2" ColumnName="id_authuserid2" />
+          <ScalarProperty Name="id_authcode2" ColumnName="id_authcode2" />
+          <ScalarProperty Name="id_authdate1" ColumnName="id_authdate1" />
+          <ScalarProperty Name="id_authuserid1" ColumnName="id_authuserid1" />
+          <ScalarProperty Name="id_authcode1" ColumnName="id_authcode1" />
+          <ScalarProperty Name="id_othersettlement" ColumnName="id_othersettlement" />
+          <ScalarProperty Name="id_allow" ColumnName="id_allow" />
+          <ScalarProperty Name="id_status" ColumnName="id_status" />
+          <ScalarProperty Name="id_cc_id" ColumnName="id_cc_id" />
+          <ScalarProperty Name="id_internalrefno" ColumnName="id_internalrefno" />
+          <ScalarProperty Name="id_otherdpid" ColumnName="id_otherdpid" />
+          <ScalarProperty Name="id_otherclientid" ColumnName="id_otherclientid" />
+          <ScalarProperty Name="id_executiondate" ColumnName="id_executiondate" />
+          <ScalarProperty Name="id_settlementno" ColumnName="id_settlementno" />
+          <ScalarProperty Name="id_mkttype" ColumnName="id_mkttype" />
+          <ScalarProperty Name="id_qty" ColumnName="id_qty" />
+          <ScalarProperty Name="id_isin" ColumnName="id_isin" />
+          <ScalarProperty Name="id_clientid" ColumnName="id_clientid" />
+          <ScalarProperty Name="id_trxflag" ColumnName="id_trxflag" />
+          <ScalarProperty Name="id_trxtype" ColumnName="id_trxtype" />
+          <ScalarProperty Name="id_trxdate" ColumnName="id_trxdate" />
+          <ScalarProperty Name="id_instcd" ColumnName="id_instcd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Security_status">
+      <EntityTypeMapping TypeName="DBContext.Security_status">
+        <MappingFragment StoreEntitySet="Security_status">
+          <ScalarProperty Name="ss_description" ColumnName="ss_description" />
+          <ScalarProperty Name="ss_code" ColumnName="ss_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SearchControl.ascx.cs" Inherits="NSDL.UserControls.SearchControl" %>
+<asp:HyperLink ID = "ctlLink" runat = "server"  Text = "..."></asp:HyperLink>

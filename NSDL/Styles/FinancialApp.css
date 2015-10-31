@@ -1,0 +1,520 @@
+#master_content .dropShadowPanel span {color:white;text-decoration:underline;}
+#master_content .dropShadowPanel span:hover {text-decoration:none;}
+
+.dropShadowPanel 
+{
+	width:300px;
+	background-color:#5377A9;
+	color:white;
+	font-weight:bold;
+}
+
+.clsLabel
+{
+	 font-size: 8pt;
+	 font-family:  Times New Roman, Arial;
+	 text-align:right 
+}
+.PageButton
+{
+    border:solid 1px #000000;
+    font-family: MS Sans Serif,verdana,arial;
+    font-size:14px;
+    color:#ffffff ;
+    font-weight:bold;
+    background:#cc3300;
+}
+
+.sidebarcontent
+{	
+	border: 1px solid #0F2543;
+	padding: 20px 20px 20px 30px;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+
+.sidebarcontent
+{	
+	border: 1px solid #0F2543;
+	padding: 20px 20px 20px 30px;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+
+.sidebar
+{
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+ .sidebarheader
+{
+	height: 24px;
+	padding: 10px 0 0 35px;
+	background-color:Aqua;
+	color: Black;
+	font-family: Sans-Serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	
+	text-transform: uppercase;
+}
+
+
+.FormHeader
+{
+	font-size: 10pt;
+	background-color:  Lime;
+	font-weight:bold;
+	color:#000000;
+	font-family: Times New Roman,Arial;
+} 
+.clsFormHeader
+{
+	font-size: 12pt;
+	background-color:#5377A9;
+	font-weight:bold;
+	color:#ffffff;
+	font-family: Times New Roman;
+}
+1
+.pageTitle
+{
+	font-size: 13px;
+	font-weight:bold;
+	color: #004b68;
+	font-family: Arial, Helvetica, sans-serif;	
+	background-color:#d7e3ee;
+	
+}
+.clsText
+{
+	font-size: 9pt;
+	font-family:  Times New Roman,arial;
+	width:150px;
+	margin-bottom: 0px;
+}	
+.pageTitleH
+{
+	font-weight: bold;
+	font-size: 11px;
+	color: #004b68;
+	font-family: Arial, Helvetica, sans-serif;
+	/*background-color:lavender;*/
+	background-color:#d7e3ee;
+	
+}
+.lable
+{
+	font-size: 12px;
+	font-weight:bold;
+	color: #004b68;
+	font-family: Arial, Helvetica, sans-serif;
+	/*background-color:aliceblue;*/
+	background-color:#d7e3ee;
+	right:auto 
+}
+.lableD
+{
+	font-size: 11px;
+	color: #004b68;
+	font-family: Arial, Helvetica, sans-serif;
+	/*background-color:gainsboro;*/
+	background-color:#F0F8FF;
+	
+}
+.lablef
+{
+	font-size: 12px;
+	font-weight:bold;
+	color: #004b68;
+	font-family: Arial, Helvetica, sans-serif;
+	/*background-color:aliceblue;*/
+	background-color:#B0C4DE;
+}
+.data
+{
+	font-size: 12px;
+	color: #004b68;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color:#F0F8FF;
+	margin-left: 40px;
+}
+
+.datag
+{
+	font-size: 11px;
+	color: #004b68;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color:#d7e3ee;
+}
+a.logimg{
+    font-family:arial;
+    font-size:13px;
+    color:#000000;
+}
+a.white
+{   COLOR: #ffffff;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12px;
+    FONT-WEIGHT: bold;
+}
+.mBody{
+    font-family:arial,helvetica,sans-serif;
+    font-size:12px;
+    color:#000000;
+}
+
+.ReqdField
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #a41c2b;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    BACKGROUND-COLOR: #efefe0;
+}
+.ReqdFieldRGT
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #FF0000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    text-align:right;	
+}
+
+.blackText{
+    font-family:arial,helvetica,sans-serif;
+    font-size:12px;
+    color:#000000;
+}
+
+.userinfo{
+    font-family:arial,helvetica,sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    color:#A000E2;
+    
+}
+.userinfodata{
+    font-family:arial,helvetica,sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    color:#606064;
+    
+}
+
+.Repdata
+{
+	background-color: #FFFFFF;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12px;
+}
+
+
+.Reptitle
+{
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 14px;
+    FONT-WEIGHT:Bold;
+}
+
+.Replable
+{
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12px;
+    FONT-WEIGHT:Bold;
+}
+
+
+
+
+.lightgreen {  
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 12px; 
+    background-color: #CCCCCC
+}
+
+.links {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #0000FF}
+
+.menublockOver {
+	FONT-SIZE: 8pt; VERTICAL-ALIGN: middle; WIDTH: 150px; CURSOR: hand; COLOR: white; LINE-HEIGHT: 18px; FONT-FAMILY: Tahoma, Verdana, helvetica, sans-serif; BACKGROUND-COLOR: #efefe0; TEXT-ALIGN: left
+}
+
+.menublockClickX {
+	FONT-SIZE: 8pt; VERTICAL-ALIGN: middle; WIDTH: 150px; CURSOR: hand; COLOR: white; LINE-HEIGHT: 18px; FONT-FAMILY: Tahoma, Verdana, helvetica, sans-serif; BACKGROUND-COLOR: #efefe0; TEXT-ALIGN: left
+}
+
+
+.menublockOver A {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.menublockOut {
+	FONT-SIZE: 8pt; VERTICAL-ALIGN: middle; WIDTH: 150px; CURSOR: hand; LINE-HEIGHT: 18px; FONT-FAMILY: Tahoma, Verdana, helvetica, sans-serif; BACKGROUND-COLOR: #fbfbf1; TEXT-ALIGN: left
+}
+.menublockOut A {
+	COLOR: #00009C; TEXT-DECORATION: none
+}
+.span
+{
+	font-family:Verdana; 
+	font-weight:bold; 
+	font-size:small ; 
+	color:Navy;
+	}
+	.spanLabel
+{
+	 
+	 font-size:small ; 
+	color :Red;
+	}
+.block {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; CURSOR: hand; COLOR: #D6CDAB; FONT-FAMILY: Tahoma, Verdana, helvetica, sans-serif
+}
+
+.stdBorder {
+	BACKGROUND-COLOR: black
+}
+
+.navblockOver {
+	CURSOR: hand; BACKGROUND-COLOR: #0066cc
+}
+
+.navblockOver A {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: white; FONT-FAMILY: Tahoma, Verdana, helvetica, sans-serif; TEXT-DECORATION: none
+}
+.navblockOut {
+	BACKGROUND-COLOR: #D6CDAB
+}
+.navblockOut A {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #004b68; FONT-FAMILY: Tahoma, Verdana, helvetica, sans-serif; TEXT-DECORATION: none
+}
+
+.sect
+{
+	BACKGROUND-COLOR: #E2E0C9;
+	FONT-FAMILY: Tahoma;
+	COLOR:#000000;
+	FONT-SIZE: 11px;
+	FONT-WEIGHT: bold
+	
+}
+
+body
+{
+background-color: #FFFFFF;
+}
+
+.error
+{
+    BACKGROUND-COLOR: #F0F8FF;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12px;
+    COLOR:#FF0000;	 
+    FONT-WEIGHT:BOLD	
+}
+
+.boldlabel
+{	
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	font-weight: bold;
+	color:#000000;
+}
+
+.address
+	{
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	font-weight: bold;
+	}
+
+.REP_label
+{
+	background-color: #FFFFFF;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	color:#000000;
+}
+
+.REP_data
+{
+	background-color: #FFFFFF;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	color:#000000;
+}
+
+.REP_body
+{
+	background-color: #FFFFFF;
+}
+
+.heading
+{
+	
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 13px;
+	color: #000000;
+}
+
+A.inner:link 
+{
+	COLOR: #000099; TEXT-DECORATION: none;FONT-SIZE: 12px;
+}
+
+.pagelink
+{
+	FONT-FAMILY: Verdana;
+	font-size:12px;
+}
+
+.bodyText
+{
+	font-weight: normal;
+	font-size: 11px;
+	color: #004b68;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.bodyTextSml
+{
+	font-weight: normal;
+	font-size: 9px;
+	color: #004b68;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.linkTxt
+{
+	font-size:		10px;
+	font-family:	Verdana, Tahoma, Arial;
+	COLOR: blue; 
+}
+
+.errorMsg
+{
+	font-size:		10px;
+	font-family:	Verdana, Tahoma, Arial;
+	FONT-WEIGHT: bold;
+	COLOR: red; 
+}
+.ErrorMessage
+{
+	font-size:	15px;
+	font-family:	Verdana, Tahoma, Arial;
+	FONT-WEIGHT: bold;
+	COLOR: red; 
+}
+
+.flattxt {
+	BORDER-RIGHT: #006699 1px solid; BORDER-TOP: #006699 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9px; WORD-SPACING: normal; VERTICAL-ALIGN: middle; BORDER-LEFT: #006699 1px solid;  COLOR: #990066; BORDER-BOTTOM: #006699 1px solid; FONT-STYLE: normal; FONT-FAMILY: verdana, Helvetica, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+
+.flattxtg {
+	BORDER-RIGHT: #006699 1px solid; BORDER-TOP: #006699 1px solid;
+	FONT-WEIGHT: normal; FONT-SIZE: 9px; WORD-SPACING: normal; VERTICAL-ALIGN: middle; 
+	BORDER-LEFT: #006699 1px solid;  COLOR: #990066; BORDER-BOTTOM: #006699 1px solid; FONT-STYLE: normal; 
+	FONT-FAMILY: verdana, Helvetica, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: #ffffff; 
+	TEXT-DECORATION: none;
+	width:75px;
+
+}
+/*
+.lable {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #004b68; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; background-color: lavender;
+}*/
+
+.text {
+	FONT-WEIGHT: lighter; FONT-SIZE: 9px; WIDTH: 100px; COLOR: #000000; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; background-color: #F0F8FF;
+}
+.boldtext {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; background-color: #F0F8FF;
+}
+TABLE.Grid {
+	BORDER-RIGHT: #dedfde 1px solid; BORDER-TOP: #dedfde 1px solid; OVERFLOW: auto; BORDER-LEFT: #dedfde 1px solid; BORDER-BOTTOM: #dedfde 1px solid; BORDER-COLLAPSE: collapse
+}
+
+
+
+INPUT {
+	border: 1px solid #666666;
+	FONT-SIZE: 8pt; 	COLOR: #000000; 	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	height: 20px;
+}
+.formtext{
+	BORDER-RIGHT: #666666 1px solid; 
+	BORDER-TOP: #666666 1px solid; 
+	FONT-SIZE: 8pt; BORDER-LEFT: #666666 1px solid; 
+	COLOR: #000000; BORDER-BOTTOM: #666666 1px solid; 
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+}
+.formButton {
+	color: #ffffff;
+	border-color: #333333 #CCCCCC #CCCCCC #333333; 
+	font-family: Arial, "Zurich BT"; font-size: 8pt; 
+	background-color:#243f76; /*#243f76; */
+	font-weight: bold; border-style: solid; border-top-width: 1px; 
+	border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;
+	cursor:hand ; 
+}
+
+.gridTitle
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: #004b68;
+	font-family: Arial, Helvetica, sans-serif;
+	/*background-color:lavender;*/
+	background-color:#d7e3ee;
+	padding:2px;
+	border-bottom-color:White;
+	margin-bottom:2px;
+	
+}
+.table
+{
+	font-size: 8pt;
+	font-family: Verdana;
+	border-color:#000000;
+	background-color:#FFE1E1;
+	width: 40%;
+}
+.GridData
+{
+	font-size: 11px;
+	color: #004b68;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color:#F0F8FF;
+	border-bottom-width:1px;
+	border-style:solid;
+}
+
+.GridAltData
+{
+	font-size: 11px;
+	/*font-weight:bold;*/
+	color: #004b68;
+	font-family: Arial, Helvetica, sans-serif;
+	/*background-color:aliceblue;*/
+	background-color:#d7e3ee;
+	border-bottom-width:1px;
+	border-style:solid;
+}
+.divstyle
+{
+width: 951px; 
+height: 796px;
+	margin-right: 0px;
+}
+
+
+.button
+{
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif; /*background-color:aliceblue;*/
+	background-color: #d7e3ee;
+	background-color: #6699cc;
+	}

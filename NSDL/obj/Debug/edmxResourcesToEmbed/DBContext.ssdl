@@ -1,0 +1,947 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Single.dbo.Auth_master' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Auth_master">
+    <Key>
+      <PropertyRef Name="am_code" />
+      <PropertyRef Name="am_amount" />
+      <PropertyRef Name="am_group1" />
+    </Key>
+    <Property Name="am_code" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="am_amount" Type="money" Nullable="false" />
+    <Property Name="am_group1" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="am_group2" Type="char" MaxLength="8" />
+    <Property Name="am_group3" Type="char" MaxLength="8" />
+    <Property Name="mkrid" Type="char" MaxLength="8" />
+    <Property Name="mkrdt" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Single.dbo.Backoffice_audit' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Backoffice_audit">
+    <Key>
+      <PropertyRef Name="ba_trx_type" />
+      <PropertyRef Name="ba_pri_key" />
+      <PropertyRef Name="ba_branchcd" />
+      <PropertyRef Name="ba_field" />
+      <PropertyRef Name="ba_oldvalue" />
+      <PropertyRef Name="ba_newvalue" />
+      <PropertyRef Name="mkrid" />
+      <PropertyRef Name="mkrdt" />
+      <PropertyRef Name="ba_computername" />
+      <PropertyRef Name="mkrtm" />
+      <PropertyRef Name="ba_delunique" />
+    </Key>
+    <Property Name="ba_trx_type" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="ba_pri_key" Type="int" Nullable="false" />
+    <Property Name="ba_branchcd" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="ba_field" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ba_oldvalue" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ba_newvalue" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="mkrid" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="mkrdt" Type="datetime" Nullable="false" />
+    <Property Name="ba_computername" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="mkrtm" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="ba_delunique" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="mkrtmold" Type="char" MaxLength="8" />
+    <Property Name="mkridold" Type="char" MaxLength="8" />
+    <Property Name="mkrdtold" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Backoffice_balance">
+    <Key>
+      <PropertyRef Name="bc_cmcd" />
+    </Key>
+    <Property Name="bc_cmcd" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="bc_ledger" Type="money" />
+    <Property Name="bc_mkrid" Type="varchar" MaxLength="8" />
+    <Property Name="bc_mkrdt" Type="varchar" MaxLength="8" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Single.dbo.Backoffice_delete' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Backoffice_delete">
+    <Key>
+      <PropertyRef Name="bd_trx_type" />
+      <PropertyRef Name="bd_trx_date" />
+      <PropertyRef Name="bd_client_id" />
+      <PropertyRef Name="bd_isin" />
+      <PropertyRef Name="bd_execution_date" />
+      <PropertyRef Name="bd_internal_refno" />
+      <PropertyRef Name="bd_status" />
+      <PropertyRef Name="bd_trx_allow" />
+      <PropertyRef Name="bd_pri_key" />
+      <PropertyRef Name="bd_branchcd" />
+      <PropertyRef Name="mkrtm" />
+      <PropertyRef Name="bd_unique" />
+    </Key>
+    <Property Name="bd_instdesc" Type="varchar" MaxLength="25" />
+    <Property Name="bd_trx_type" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="bd_trx_date" Type="datetime" Nullable="false" />
+    <Property Name="bd_client_id" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="bd_isin" Type="char" MaxLength="12" Nullable="false" />
+    <Property Name="bd_qty" Type="money" />
+    <Property Name="bd_market_type" Type="varchar" MaxLength="60" />
+    <Property Name="bd_settlement" Type="char" MaxLength="7" />
+    <Property Name="bd_execution_date" Type="datetime" Nullable="false" />
+    <Property Name="bd_other_dp_id" Type="char" MaxLength="8" />
+    <Property Name="bd_other_client_id" Type="char" MaxLength="16" />
+    <Property Name="bd_other_cmbp_id" Type="char" MaxLength="8" />
+    <Property Name="bd_internal_refno" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="bd_other_markettype" Type="varchar" MaxLength="60" />
+    <Property Name="bd_other_settle_no" Type="char" MaxLength="7" />
+    <Property Name="bd_lock_release_code" Type="char" MaxLength="2" />
+    <Property Name="bd_lock_release_date" Type="datetime" />
+    <Property Name="bd_cc_id1" Type="varchar" MaxLength="8" />
+    <Property Name="bd_cc_id2" Type="varchar" MaxLength="8" />
+    <Property Name="bd_status" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="bd_trx_allow" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="bd_pri_key" Type="int" Nullable="false" />
+    <Property Name="bd_authcode1" Type="char" MaxLength="1" />
+    <Property Name="bd_authuserid1" Type="char" MaxLength="8" />
+    <Property Name="bd_authdt1" Type="datetime" />
+    <Property Name="bd_authcode2" Type="char" MaxLength="1" />
+    <Property Name="bd_authuserid2" Type="char" MaxLength="8" />
+    <Property Name="bd_authdt2" Type="datetime" />
+    <Property Name="bd_branchcd" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="bd_branchbatchcd" Type="varchar" MaxLength="6" />
+    <Property Name="mkrid" Type="char" MaxLength="8" />
+    <Property Name="mkrdt" Type="datetime" />
+    <Property Name="bd_authcode3" Type="char" MaxLength="1" />
+    <Property Name="bd_authuserid3" Type="char" MaxLength="8" />
+    <Property Name="bd_authdt3" Type="datetime" />
+    <Property Name="bd_authremarks" Type="char" MaxLength="75" />
+    <Property Name="bd_scrollno" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="bd_totalcertificate" Type="int" />
+    <Property Name="bd_computername" Type="varchar" MaxLength="15" />
+    <Property Name="mkrtm" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="bd_unique" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="mkrtmold" Type="char" MaxLength="8" />
+    <Property Name="mkridold" Type="char" MaxLength="8" />
+    <Property Name="bd_authtm1" Type="char" MaxLength="8" />
+    <Property Name="bd_authtm2" Type="char" MaxLength="8" />
+    <Property Name="bd_authtm3" Type="char" MaxLength="8" />
+    <Property Name="mkrdtold" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Bank_master">
+    <Key>
+      <PropertyRef Name="bk_micr" />
+    </Key>
+    <Property Name="bk_id" Type="char" MaxLength="20" />
+    <Property Name="bk_name" Type="varchar" MaxLength="135" />
+    <Property Name="bk_branch" Type="varchar" MaxLength="100" />
+    <Property Name="bk_ifsccode" Type="varchar" MaxLength="11" />
+    <Property Name="bk_micr" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="bk_add1" Type="varchar" MaxLength="36" />
+    <Property Name="bk_add2" Type="varchar" MaxLength="36" />
+    <Property Name="bk_add3" Type="varchar" MaxLength="36" />
+    <Property Name="bk_add4" Type="varchar" MaxLength="36" />
+    <Property Name="bk_pin" Type="varchar" MaxLength="10" />
+    <Property Name="bk_filler1" Type="varchar" MaxLength="24" />
+    <Property Name="bk_filler2" Type="varchar" MaxLength="24" />
+    <Property Name="bk_status" Type="varchar" MaxLength="2" />
+    <Property Name="bk_filler3" Type="varchar" MaxLength="12" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Single.dbo.Book_size' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Book_size">
+    <Key>
+      <PropertyRef Name="bk_size" />
+    </Key>
+    <Property Name="bk_size" Type="smallint" Nullable="false" />
+    <Property Name="mkrid" Type="varchar" MaxLength="8" />
+    <Property Name="mkrdt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Bpmaster">
+    <Key>
+      <PropertyRef Name="bp_id" />
+    </Key>
+    <Property Name="bp_id" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="bp_role" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="bp_add1" Type="varchar" MaxLength="36" />
+    <Property Name="bp_add2" Type="varchar" MaxLength="36" />
+    <Property Name="bp_add3" Type="varchar" MaxLength="36" />
+    <Property Name="bp_add4" Type="varchar" MaxLength="36" />
+    <Property Name="bp_pin" Type="char" MaxLength="7" />
+    <Property Name="bp_phone" Type="varchar" MaxLength="24" />
+    <Property Name="bp_fax" Type="varchar" MaxLength="24" />
+    <Property Name="bp_assd_cc_id" Type="char" MaxLength="8" />
+    <Property Name="bp_assd_dp_id" Type="char" MaxLength="8" />
+    <Property Name="bp_assd_cc_cmid" Type="varchar" MaxLength="16" />
+    <Property Name="bp_category" Type="char" MaxLength="2" />
+    <Property Name="bp_name" Type="varchar" MaxLength="135" />
+    <Property Name="bp_stat" Type="char" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Branch_master">
+    <Key>
+      <PropertyRef Name="bm_branchcd" />
+    </Key>
+    <Property Name="bm_branchcd" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="bm_branchname" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="bm_contact" Type="varchar" MaxLength="45" />
+    <Property Name="bm_add1" Type="varchar" MaxLength="36" />
+    <Property Name="bm_add2" Type="varchar" MaxLength="36" />
+    <Property Name="bm_add3" Type="varchar" MaxLength="36" />
+    <Property Name="bm_city" Type="varchar" MaxLength="36" />
+    <Property Name="bm_pin" Type="char" MaxLength="6" />
+    <Property Name="bm_phone" Type="varchar" MaxLength="24" />
+    <Property Name="bm_fax" Type="varchar" MaxLength="15" />
+    <Property Name="bm_email" Type="varchar" MaxLength="75" />
+    <Property Name="bm_allow" Type="char" MaxLength="1" />
+    <Property Name="bm_batchno" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="bm_ip_add" Type="varchar" MaxLength="15" />
+    <Property Name="bm_dialup" Type="varchar" MaxLength="15" />
+    <Property Name="bm_server" Type="varchar" MaxLength="30" />
+    <Property Name="bm_database" Type="varchar" MaxLength="20" />
+    <Property Name="bm_dbo" Type="varchar" MaxLength="15" />
+    <Property Name="bm_user" Type="varchar" MaxLength="15" />
+    <Property Name="bm_pwd" Type="varchar" MaxLength="15" />
+    <Property Name="bm_workarea" Type="varchar" MaxLength="150" />
+    <Property Name="mkrid" Type="char" MaxLength="8" />
+    <Property Name="mkrdt" Type="datetime" />
+    <Property Name="bm_percentage" Type="money" />
+    <Property Name="bm_flag" Type="varchar" MaxLength="2" />
+    <Property Name="bm_authorisation" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Cc_calender">
+    <Key>
+      <PropertyRef Name="cc_id" />
+      <PropertyRef Name="cc_mkt_type" />
+      <PropertyRef Name="cc_settle_no" />
+    </Key>
+    <Property Name="cc_id" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="cc_mkt_type" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="cc_settle_no" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="cc_settle_periodfrom" Type="datetime" Nullable="false" />
+    <Property Name="cc_settle_periodto" Type="datetime" Nullable="false" />
+    <Property Name="cc_nsdl_deadlinedt" Type="datetime" Nullable="false" />
+    <Property Name="cc_nsdl_deadlinett" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="cc_payin_dt" Type="datetime" Nullable="false" />
+    <Property Name="cc_payout_dt" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Chequemaster">
+    <Key>
+      <PropertyRef Name="chm_chqno" />
+      <PropertyRef Name="chm_instcd" />
+      <PropertyRef Name="chm_booksize" />
+    </Key>
+    <Property Name="chm_cmcd" Type="char" MaxLength="8" />
+    <Property Name="chm_chqno" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="chm_instcd" Type="smallint" Nullable="false" />
+    <Property Name="chm_booksize" Type="smallint" Nullable="false" />
+    <Property Name="chm_refno" Type="varchar" MaxLength="8" />
+    <Property Name="chm_refdate" Type="datetime" />
+    <Property Name="chm_status" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="chm_issuedate" Type="datetime" />
+    <Property Name="chm_remarks" Type="varchar" MaxLength="30" />
+    <Property Name="chm_branchcd" Type="char" MaxLength="6" />
+    <Property Name="mkrid" Type="varchar" MaxLength="8" />
+    <Property Name="mkrdt" Type="datetime" />
+    <Property Name="chm_fromno" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="chm_tono" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="chm_type" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Chequestop">
+    <Key>
+      <PropertyRef Name="chs_cmcd" />
+      <PropertyRef Name="chs_chqno" />
+      <PropertyRef Name="chs_date" />
+      <PropertyRef Name="chs_instcd" />
+    </Key>
+    <Property Name="chs_cmcd" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="chs_chqno" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="chs_chqdate" Type="char" MaxLength="8" />
+    <Property Name="chs_reference" Type="varchar" MaxLength="20" />
+    <Property Name="chs_refdate" Type="char" MaxLength="8" />
+    <Property Name="chs_status" Type="char" MaxLength="1" />
+    <Property Name="chs_date" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="chs_instcd" Type="smallint" Nullable="false" />
+    <Property Name="chs_remark" Type="varchar" MaxLength="30" />
+    <Property Name="mkrid" Type="varchar" MaxLength="8" />
+    <Property Name="mkrdt" Type="char" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="Client_master1">
+    <Key>
+      <PropertyRef Name="cm_cd" />
+    </Key>
+    <Property Name="cm_brcode" Type="char" MaxLength="6" />
+    <Property Name="cm_cd" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="cm_benttype" Type="char" MaxLength="2" />
+    <Property Name="cm_bensubtype" Type="char" MaxLength="2" />
+    <Property Name="cm_ben_shortname" Type="varchar" MaxLength="16" />
+    <Property Name="cm_ben_acccatorgy" Type="char" MaxLength="2" />
+    <Property Name="cm_occup" Type="char" MaxLength="2" />
+    <Property Name="cm_name" Type="varchar" MaxLength="135" />
+    <Property Name="cm_filler" Type="varchar" MaxLength="115" />
+    <Property Name="cm_fatherhu" Type="varchar" MaxLength="45" />
+    <Property Name="cm_add1" Type="varchar" MaxLength="36" />
+    <Property Name="cm_add2" Type="varchar" MaxLength="36" />
+    <Property Name="cm_add3" Type="varchar" MaxLength="36" />
+    <Property Name="cm_add4" Type="varchar" MaxLength="36" />
+    <Property Name="cm_pin" Type="varchar" MaxLength="10" />
+    <Property Name="cm_tele1" Type="varchar" MaxLength="24" />
+    <Property Name="cm_fax" Type="varchar" MaxLength="24" />
+    <Property Name="cm_sech_name" Type="varchar" MaxLength="45" />
+    <Property Name="cm_sech_fathername" Type="varchar" MaxLength="45" />
+    <Property Name="cm_thih_name" Type="varchar" MaxLength="45" />
+    <Property Name="cm_thih_fathername" Type="varchar" MaxLength="45" />
+    <Property Name="cm_bp_id" Type="char" MaxLength="8" />
+    <Property Name="cm_addperflag" Type="char" MaxLength="1" />
+    <Property Name="cm_opendate" Type="datetime" />
+    <Property Name="cm_filler1" Type="varchar" MaxLength="55" />
+    <Property Name="cm_firstpanno" Type="varchar" MaxLength="30" />
+    <Property Name="cm_secpanno" Type="varchar" MaxLength="30" />
+    <Property Name="cm_thirdpanno" Type="varchar" MaxLength="30" />
+    <Property Name="cm_nomgur_flag" Type="varchar" MaxLength="1" />
+    <Property Name="cm_nomgur_name" Type="varchar" MaxLength="45" />
+    <Property Name="cm_dobmin" Type="varchar" MaxLength="8" />
+    <Property Name="cm_nomineeadd1" Type="varchar" MaxLength="36" />
+    <Property Name="cm_nomineeadd2" Type="varchar" MaxLength="36" />
+    <Property Name="cm_nomineeadd3" Type="varchar" MaxLength="36" />
+    <Property Name="cm_nomineeadd4" Type="varchar" MaxLength="36" />
+    <Property Name="cm_nomineepin" Type="varchar" MaxLength="7" />
+    <Property Name="cm_stainst" Type="varchar" MaxLength="1" />
+    <Property Name="cm_rgess" Type="varchar" MaxLength="1" />
+    <Property Name="cm_bsda" Type="varchar" MaxLength="1" />
+    <Property Name="cm_filler2" Type="varchar" MaxLength="20" />
+    <Property Name="cm_bankifscocde" Type="varchar" MaxLength="11" />
+    <Property Name="cm_commdity" Type="varchar" MaxLength="1" />
+    <Property Name="cm_bankacttype" Type="varchar" MaxLength="2" />
+    <Property Name="cm_bankname" Type="varchar" MaxLength="135" />
+    <Property Name="cm_bankadd1" Type="varchar" MaxLength="36" />
+    <Property Name="cm_bankadd2" Type="varchar" MaxLength="36" />
+    <Property Name="cm_bankadd3" Type="varchar" MaxLength="36" />
+    <Property Name="cm_bankadd4" Type="varchar" MaxLength="36" />
+    <Property Name="cm_bankpin" Type="varchar" MaxLength="7" />
+    <Property Name="cm_micr" Type="varchar" MaxLength="9" />
+    <Property Name="cm_rbi_refno" Type="varchar" MaxLength="50" />
+    <Property Name="cm_rbi_appdate" Type="datetime" />
+    <Property Name="cm_sebireg" Type="varchar" MaxLength="24" />
+    <Property Name="cm_taxstatus" Type="varchar" MaxLength="20" />
+    <Property Name="cm_ben_satus" Type="char" MaxLength="2" />
+    <Property Name="cm_ben_satatchagecode" Type="varchar" MaxLength="50" />
+    <Property Name="cm_acc_closuredate" Type="datetime" />
+    <Property Name="cm_filler3" Type="varchar" MaxLength="20" />
+    <Property Name="cm_corforadd1" Type="varchar" MaxLength="36" />
+    <Property Name="cm_corforadd2" Type="varchar" MaxLength="36" />
+    <Property Name="cm_corforadd3" Type="varchar" MaxLength="36" />
+    <Property Name="cm_corforadd4" Type="varchar" MaxLength="36" />
+    <Property Name="cm_corforpin" Type="varchar" MaxLength="10" />
+    <Property Name="cm_corfortele1" Type="varchar" MaxLength="24" />
+    <Property Name="cm_corforfax" Type="varchar" MaxLength="24" />
+    <Property Name="cm_minornomineei_ind" Type="varchar" MaxLength="1" />
+    <Property Name="cm_minornominee_dob" Type="datetime" />
+    <Property Name="cm_minornomineei_name" Type="varchar" MaxLength="45" />
+    <Property Name="cm_minornomineei_add1" Type="varchar" MaxLength="36" />
+    <Property Name="cm_minornomineei_add2" Type="varchar" MaxLength="36" />
+    <Property Name="cm_minornomineei_add3" Type="varchar" MaxLength="36" />
+    <Property Name="cm_minornomineei_add4" Type="varchar" MaxLength="36" />
+    <Property Name="cm_minornomineei_pin" Type="varchar" MaxLength="7" />
+    <Property Name="cm_bankactno" Type="varchar" MaxLength="30" />
+    <Property Name="cm_email" Type="varchar" MaxLength="50" />
+    <Property Name="cm_mobile" Type="char" MaxLength="13" />
+    <Property Name="cm_filler4" Type="varchar" MaxLength="1" />
+    <Property Name="cm_rtaemai1" Type="varchar" MaxLength="1" />
+    <Property Name="cm_sms" Type="char" MaxLength="1" />
+    <Property Name="cm_panflag" Type="char" MaxLength="1" />
+    <Property Name="cm_auth_flag" Type="char" MaxLength="1" />
+    <Property Name="cm_nonomniee_flag" Type="char" MaxLength="1" />
+    <Property Name="cm_filler5" Type="varchar" MaxLength="10" />
+    <Property Name="cm_secondemail" Type="varchar" MaxLength="50" />
+    <Property Name="cm_second_mobile" Type="varchar" MaxLength="13" />
+    <Property Name="cm_filler6" Type="varchar" MaxLength="1" />
+    <Property Name="cm_rtaemail2" Type="varchar" MaxLength="1" />
+    <Property Name="cm_sec_sms" Type="char" MaxLength="1" />
+    <Property Name="cm_secpan_flag" Type="char" MaxLength="1" />
+    <Property Name="cm_secauth_flag" Type="char" MaxLength="1" />
+    <Property Name="cm_filler7" Type="varchar" MaxLength="12" />
+    <Property Name="cm_thirdemail" Type="varchar" MaxLength="50" />
+    <Property Name="cm_third_mobile" Type="varchar" MaxLength="13" />
+    <Property Name="cm_filler8" Type="varchar" MaxLength="2" />
+    <Property Name="cm_rtaemail3" Type="varchar" MaxLength="1" />
+    <Property Name="cm_thir_sms" Type="char" MaxLength="1" />
+    <Property Name="cm_thirpan_flag" Type="char" MaxLength="1" />
+    <Property Name="cm_thirauth_flag" Type="char" MaxLength="1" />
+    <Property Name="cm_addhar1" Type="varchar" MaxLength="12" />
+    <Property Name="cm_filler9" Type="varchar" MaxLength="4" />
+    <Property Name="cm_addhar2" Type="varchar" MaxLength="12" />
+    <Property Name="cm_filler10" Type="varchar" MaxLength="4" />
+    <Property Name="cm_addhar3" Type="varchar" MaxLength="12" />
+    <Property Name="cm_filler11" Type="varchar" MaxLength="4" />
+    <Property Name="cm_filler12" Type="varchar" MaxLength="12" />
+    <Property Name="cm_brboffcode" Type="char" MaxLength="6" />
+    <Property Name="cm_groupcd" Type="char" MaxLength="3" />
+    <Property Name="cm_familycd" Type="char" MaxLength="3" />
+    <Property Name="cm_introducer" Type="varchar" MaxLength="30" />
+    <Property Name="cm_attorney" Type="char" MaxLength="1" />
+    <Property Name="cm_indicator" Type="char" MaxLength="1" />
+    <Property Name="cm_add_pref_flag" Type="char" MaxLength="1" />
+    <Property Name="cm_chgsscheme" Type="char" MaxLength="10" />
+    <Property Name="cm_billcycle" Type="char" MaxLength="1" />
+    <Property Name="cm_statements" Type="char" MaxLength="10" />
+    <Property Name="cm_billflag" Type="char" MaxLength="1" />
+    <Property Name="cm_billcode" Type="char" MaxLength="8" />
+    <Property Name="cm_collectioncode" Type="char" MaxLength="8" />
+    <Property Name="cm_allowcredit" Type="money" />
+    <Property Name="cm_upfront" Type="char" MaxLength="1" />
+    <Property Name="cm_lastbill" Type="datetime" />
+    <Property Name="cm_keepsettlement" Type="char" MaxLength="1" />
+    <Property Name="cm_fre_trx" Type="tinyint" />
+    <Property Name="cm_fre_hold" Type="tinyint" />
+    <Property Name="cm_fre_bill" Type="tinyint" />
+    <Property Name="cm_blsavingcd" Type="char" MaxLength="20" />
+    <Property Name="cm_amtmntdt" Type="datetime" />
+    <Property Name="cm_updatebal" Type="money" />
+    <Property Name="cm_schedule" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="cm_openingbal" Type="money" />
+    <Property Name="mkrdt" Type="datetime" />
+    <Property Name="mkrid" Type="char" MaxLength="8" />
+    <Property Name="cm_freezeyn" Type="char" MaxLength="1" />
+    <Property Name="cm_freezereason" Type="varchar" MaxLength="100" />
+    <Property Name="cm_PoaForPayin" Type="char" MaxLength="1" />
+    <Property Name="cm_remissier" Type="char" MaxLength="8" />
+    <Property Name="cm_remissierscheme" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Instrument_master">
+    <Key>
+      <PropertyRef Name="im_instcd" />
+    </Key>
+    <Property Name="im_instcd" Type="smallint" Nullable="false" />
+    <Property Name="im_desc" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="im_trtype" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="im_reorderlevel" Type="int" />
+    <Property Name="mkrid" Type="varchar" MaxLength="8" />
+    <Property Name="mkrdt" Type="char" MaxLength="8" />
+    <Property Name="im_defaultyn" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Interdepository">
+    <Key>
+      <PropertyRef Name="id_pri_key" />
+      <PropertyRef Name="id_branchcd" />
+    </Key>
+    <Property Name="id_instcd" Type="char" MaxLength="3" />
+    <Property Name="id_trxdate" Type="datetime" Nullable="false" />
+    <Property Name="id_trxtype" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="id_trxflag" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="id_clientid" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="id_isin" Type="char" MaxLength="12" Nullable="false" />
+    <Property Name="id_qty" Type="money" />
+    <Property Name="id_mkttype" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="id_settlementno" Type="char" MaxLength="7" />
+    <Property Name="id_executiondate" Type="datetime" Nullable="false" />
+    <Property Name="id_otherclientid" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="id_otherdpid" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="id_internalrefno" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="id_cc_id" Type="varchar" MaxLength="8" />
+    <Property Name="id_status" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="id_allow" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="id_othersettlement" Type="char" MaxLength="13" />
+    <Property Name="id_authcode1" Type="char" MaxLength="1" />
+    <Property Name="id_authuserid1" Type="char" MaxLength="8" />
+    <Property Name="id_authdate1" Type="datetime" />
+    <Property Name="id_authcode2" Type="char" MaxLength="1" />
+    <Property Name="id_authuserid2" Type="char" MaxLength="8" />
+    <Property Name="id_authdate2" Type="datetime" />
+    <Property Name="id_batch_no" Type="int" />
+    <Property Name="id_pri_key" Type="int" Nullable="false" />
+    <Property Name="id_branchcd" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="id_branchbatchcd" Type="varchar" MaxLength="6" />
+    <Property Name="mkrid" Type="char" MaxLength="8" />
+    <Property Name="mkrdt" Type="datetime" />
+    <Property Name="id_authcode3" Type="char" MaxLength="1" />
+    <Property Name="id_authuserid3" Type="char" MaxLength="8" />
+    <Property Name="id_authdt3" Type="datetime" />
+    <Property Name="id_authremarks" Type="char" MaxLength="75" />
+    <Property Name="id_scrollno" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="id_dqty" Type="money" />
+    <Property Name="id_lotno" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="id_authtm1" Type="char" MaxLength="8" />
+    <Property Name="id_authtm2" Type="char" MaxLength="8" />
+    <Property Name="id_authtm3" Type="char" MaxLength="8" />
+    <Property Name="mkrtm" Type="char" MaxLength="8" />
+    <Property Name="id_instreceivemode" Type="char" MaxLength="1" />
+    <Property Name="id_recoslipyn" Type="char" MaxLength="1" />
+    <Property Name="id_entrymode" Type="char" MaxLength="1" />
+    <Property Name="id_remarks" Type="varchar" MaxLength="100" />
+    <Property Name="id_CDSLsettlement" Type="varchar" MaxLength="13" />
+  </EntityType>
+  <EntityType Name="Interdepository_auth">
+    <Key>
+      <PropertyRef Name="id_pri_key" />
+      <PropertyRef Name="id_branchcd" />
+    </Key>
+    <Property Name="id_instcd" Type="char" MaxLength="3" />
+    <Property Name="id_trxdate" Type="datetime" Nullable="false" />
+    <Property Name="id_trxtype" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="id_trxflag" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="id_clientid" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="id_isin" Type="char" MaxLength="12" Nullable="false" />
+    <Property Name="id_qty" Type="money" />
+    <Property Name="id_mkttype" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="id_settlementno" Type="char" MaxLength="7" />
+    <Property Name="id_executiondate" Type="datetime" Nullable="false" />
+    <Property Name="id_otherclientid" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="id_otherdpid" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="id_internalrefno" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="id_cc_id" Type="varchar" MaxLength="8" />
+    <Property Name="id_status" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="id_allow" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="id_othersettlement" Type="char" MaxLength="13" />
+    <Property Name="id_authcode1" Type="char" MaxLength="1" />
+    <Property Name="id_authuserid1" Type="char" MaxLength="8" />
+    <Property Name="id_authdate1" Type="datetime" />
+    <Property Name="id_authcode2" Type="char" MaxLength="1" />
+    <Property Name="id_authuserid2" Type="char" MaxLength="8" />
+    <Property Name="id_authdate2" Type="datetime" />
+    <Property Name="id_batch_no" Type="int" />
+    <Property Name="id_pri_key" Type="int" Nullable="false" />
+    <Property Name="id_branchcd" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="id_branchbatchcd" Type="varchar" MaxLength="6" />
+    <Property Name="mkrid" Type="char" MaxLength="8" />
+    <Property Name="mkrdt" Type="datetime" />
+    <Property Name="id_authcode3" Type="char" MaxLength="1" />
+    <Property Name="id_authuserid3" Type="char" MaxLength="8" />
+    <Property Name="id_authdt3" Type="datetime" />
+    <Property Name="id_authremarks" Type="char" MaxLength="75" />
+    <Property Name="id_scrollno" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="id_dqty" Type="money" />
+    <Property Name="id_lotno" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="id_authtm1" Type="char" MaxLength="8" />
+    <Property Name="id_authtm2" Type="char" MaxLength="8" />
+    <Property Name="id_authtm3" Type="char" MaxLength="8" />
+    <Property Name="mkrtm" Type="char" MaxLength="8" />
+    <Property Name="id_instreceivemode" Type="char" MaxLength="1" />
+    <Property Name="id_recoslipyn" Type="char" MaxLength="1" />
+    <Property Name="id_entrymode" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Inward_entry">
+    <Key>
+      <PropertyRef Name="ie_scrollno" />
+    </Key>
+    <Property Name="ie_lotno" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="ie_trxtype" Type="char" MaxLength="3" />
+    <Property Name="ie_instno" Type="char" MaxLength="3" />
+    <Property Name="ie_ref" Type="char" MaxLength="3" />
+    <Property Name="ie_slipno" Type="char" MaxLength="20" />
+    <Property Name="ie_cmcd" Type="char" MaxLength="8" />
+    <Property Name="ie_dt" Type="datetime" />
+    <Property Name="ie_execdt" Type="datetime" />
+    <Property Name="ie_nooftrx" Type="int" />
+    <Property Name="ie_noofcert" Type="int" />
+    <Property Name="ie_rejected" Type="int" />
+    <Property Name="ie_scrollno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mkrid" Type="char" MaxLength="8" />
+    <Property Name="mkrdt" Type="datetime" />
+    <Property Name="ie_charge" Type="money" />
+    <Property Name="ie_mode" Type="varchar" MaxLength="35" />
+    <Property Name="ie_remark" Type="varchar" MaxLength="100" />
+    <Property Name="ie_pri_key" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="ie_branchcd" Type="varchar" MaxLength="6" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Single.dbo.Lot_size' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Lot_size">
+    <Key>
+      <PropertyRef Name="lz_lotno" />
+      <PropertyRef Name="lz_type" />
+      <PropertyRef Name="lz_size" />
+      <PropertyRef Name="lz_status" />
+      <PropertyRef Name="mkrid" />
+      <PropertyRef Name="lz_branchcd" />
+    </Key>
+    <Property Name="lz_lotno" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="lz_type" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="lz_size" Type="int" Nullable="false" />
+    <Property Name="lz_status" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="mkrid" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="mkrdt" Type="datetime" />
+    <Property Name="lz_branchcd" Type="varchar" MaxLength="6" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Single.dbo.Rate_master' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Rate_master">
+    <Key>
+      <PropertyRef Name="rm_isin_code" />
+      <PropertyRef Name="rm_trx_date" />
+      <PropertyRef Name="rm_rate" />
+    </Key>
+    <Property Name="rm_isin_code" Type="char" MaxLength="12" Nullable="false" />
+    <Property Name="rm_trx_date" Type="datetime" Nullable="false" />
+    <Property Name="rm_rate" Type="money" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Single.dbo.Reasonfortrade' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Reasonfortrade">
+    <Key>
+      <PropertyRef Name="rt_code" />
+    </Key>
+    <Property Name="rt_code" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="rt_desc" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="Security">
+    <Key>
+      <PropertyRef Name="sc_isincode" />
+    </Key>
+    <Property Name="sc_isincode" Type="char" MaxLength="12" Nullable="false" />
+    <Property Name="sc_nsecurity_code" Type="varchar" MaxLength="9" />
+    <Property Name="sc_book_basis" Type="int" />
+    <Property Name="sc_isinname" Type="varchar" MaxLength="140" Nullable="false" />
+    <Property Name="sc_company_code" Type="char" MaxLength="8" />
+    <Property Name="sc_company_name" Type="varchar" MaxLength="140" Nullable="false" />
+    <Property Name="sc_security_type" Type="char" MaxLength="4" />
+    <Property Name="sc_security_subtype" Type="char" MaxLength="4" />
+    <Property Name="sc_issue" Type="datetime" Nullable="false" />
+    <Property Name="sc_maturity_date" Type="datetime" />
+    <Property Name="sc_convert_date" Type="datetime" />
+    <Property Name="sc_face_value" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="sc_convert_amount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="sc_agentname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sc_security_status" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="sc_security_remark" Type="varchar" MaxLength="50" />
+    <Property Name="sc_decimal_allow" Type="char" MaxLength="1" />
+    <Property Name="sc_reg_code" Type="char" MaxLength="8" />
+    <Property Name="sc_reg_name" Type="char" MaxLength="140" />
+    <Property Name="sc_bsecd" Type="varchar" MaxLength="50" />
+    <Property Name="sc_nsesym" Type="varchar" MaxLength="10" />
+    <Property Name="sc_nsesrs" Type="char" MaxLength="2" />
+    <Property Name="sc_attn" Type="varchar" MaxLength="30" />
+    <Property Name="sc_sl_balance" Type="char" MaxLength="13" />
+    <Property Name="sc_rate" Type="money" />
+    <Property Name="sc_rolling" Type="char" MaxLength="1" />
+    <Property Name="sc_corporateaction" Type="char" MaxLength="1" />
+    <Property Name="mkrid" Type="char" MaxLength="8" />
+    <Property Name="mkrdt" Type="datetime" />
+    <Property Name="sc_sector" Type="char" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="Security_status">
+    <Key>
+      <PropertyRef Name="ss_code" />
+    </Key>
+    <Property Name="ss_code" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="ss_description" Type="varchar" MaxLength="35" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Stock_master">
+    <Key>
+      <PropertyRef Name="stm_instcd" />
+      <PropertyRef Name="stm_fromno" />
+      <PropertyRef Name="stm_booksize" />
+    </Key>
+    <Property Name="stm_instcd" Type="smallint" Nullable="false" />
+    <Property Name="stm_vmcd" Type="smallint" />
+    <Property Name="stm_vmrefno" Type="varchar" MaxLength="10" />
+    <Property Name="stm_date" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="stm_fromno" Type="int" Nullable="false" />
+    <Property Name="stm_tono" Type="int" Nullable="false" />
+    <Property Name="stm_booksize" Type="smallint" Nullable="false" />
+    <Property Name="stm_noofbooks" Type="int" Nullable="false" />
+    <Property Name="mkrid" Type="varchar" MaxLength="8" />
+    <Property Name="mkrdt" Type="char" MaxLength="8" />
+    <Property Name="stm_vmtype" Type="varchar" MaxLength="10" />
+    <Property Name="stm_bookfromno" Type="int" />
+    <Property Name="stm_booktono" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Single.dbo.Sysparameter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Sysparameter">
+    <Key>
+      <PropertyRef Name="sp_parmcd" />
+    </Key>
+    <Property Name="sp_parmcd" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="sp_effdt" Type="char" MaxLength="8" />
+    <Property Name="sp_name" Type="varchar" MaxLength="40" />
+    <Property Name="sp_datatype" Type="decimal" Precision="2" Scale="0" />
+    <Property Name="sp_datalen" Type="decimal" Precision="2" Scale="0" />
+    <Property Name="sp_table" Type="char" MaxLength="2" />
+    <Property Name="sp_sysvalue" Type="varchar" MaxLength="400" />
+    <Property Name="sp_Securedyn" Type="char" MaxLength="1" />
+    <Property Name="mkrid" Type="char" MaxLength="8" />
+    <Property Name="mkrdt" Type="char" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="Trxbackoffice">
+    <Key>
+      <PropertyRef Name="tb_pri_key" />
+      <PropertyRef Name="tb_branchcd" />
+    </Key>
+    <Property Name="tb_pri_key" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tb_internal_refno" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="tb_instcd" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="tb_trx_type" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="tb_trx_date" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="tb_trx_flag" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="tb_client_id" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="tb_isin" Type="char" MaxLength="12" Nullable="false" />
+    <Property Name="tb_qty" Type="numeric" Precision="18" Scale="3" />
+    <Property Name="tb_market_type" Type="char" MaxLength="2" />
+    <Property Name="tb_settlement" Type="char" MaxLength="13" />
+    <Property Name="tb_exchangeid" Type="char" MaxLength="2" />
+    <Property Name="tb_chid" Type="char" MaxLength="2" />
+    <Property Name="tb_other_dp_id" Type="char" MaxLength="8" />
+    <Property Name="tb_other_client_id" Type="char" MaxLength="16" />
+    <Property Name="tb_other_cmbp_id" Type="char" MaxLength="8" />
+    <Property Name="tb_other_markettype" Type="char" MaxLength="2" />
+    <Property Name="tb_other_settle_no" Type="char" MaxLength="13" />
+    <Property Name="tb_br_code" Type="char" MaxLength="8" />
+    <Property Name="tb_reference" Type="varchar" MaxLength="6" />
+    <Property Name="tb_irre_code1" Type="char" MaxLength="4" />
+    <Property Name="tb_irre_code2" Type="char" MaxLength="4" />
+    <Property Name="tb_irre_code3" Type="char" MaxLength="4" />
+    <Property Name="tb_irre_code4" Type="char" MaxLength="4" />
+    <Property Name="tb_br_pri_key" Type="varchar" MaxLength="8" />
+    <Property Name="tb_status" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="tb_trx_allow" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="tb_authcode1" Type="char" MaxLength="1" />
+    <Property Name="tb_authuserid1" Type="char" MaxLength="8" />
+    <Property Name="tb_authdt1" Type="char" MaxLength="8" />
+    <Property Name="tb_authcode2" Type="char" MaxLength="1" />
+    <Property Name="tb_authuserid2" Type="char" MaxLength="8" />
+    <Property Name="tb_authdt2" Type="char" MaxLength="8" />
+    <Property Name="tb_batch_no" Type="varchar" MaxLength="12" />
+    <Property Name="tb_branchcd" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="tb_branchbatchcd" Type="varchar" MaxLength="6" />
+    <Property Name="tb_cash" Type="char" MaxLength="1" />
+    <Property Name="tb_reasfortrade" Type="char" MaxLength="2" />
+    <Property Name="tb_rejreason" Type="varchar" MaxLength="10" />
+    <Property Name="mkrid" Type="char" MaxLength="8" />
+    <Property Name="mkrdt" Type="char" MaxLength="8" />
+    <Property Name="tb_authcode3" Type="char" MaxLength="1" />
+    <Property Name="tb_authuserid3" Type="char" MaxLength="8" />
+    <Property Name="tb_authdt3" Type="char" MaxLength="8" />
+    <Property Name="tb_authremarks" Type="char" MaxLength="75" />
+    <Property Name="tb_scrollno" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="tb_obligationid" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="tb_serialno" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="tb_tradeno" Type="char" MaxLength="16" />
+    <Property Name="tb_exec_date" Type="char" MaxLength="8" />
+    <Property Name="tb_remark" Type="varchar" MaxLength="50" />
+    <Property Name="mkrtm" Type="char" MaxLength="8" />
+    <Property Name="tb_authtm1" Type="char" MaxLength="8" />
+    <Property Name="tb_authtm2" Type="char" MaxLength="8" />
+    <Property Name="tb_authtm3" Type="char" MaxLength="8" />
+    <Property Name="tb_instreceivemode" Type="char" MaxLength="1" />
+    <Property Name="tb_recoslipyn" Type="char" MaxLength="1" />
+    <Property Name="tb_entrymode" Type="char" MaxLength="1" />
+    <Property Name="tb_lotno" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Single.dbo.Used_slip' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Used_slip">
+    <Key>
+      <PropertyRef Name="us_trxtype" />
+      <PropertyRef Name="us_instcd" />
+      <PropertyRef Name="us_irn" />
+      <PropertyRef Name="us_clientcd" />
+      <PropertyRef Name="us_execdt" />
+      <PropertyRef Name="us_mode" />
+      <PropertyRef Name="us_remarks" />
+      <PropertyRef Name="us_archiveyn" />
+      <PropertyRef Name="us_filler1" />
+      <PropertyRef Name="mkrid" />
+      <PropertyRef Name="mkrdt" />
+      <PropertyRef Name="mkrtm" />
+    </Key>
+    <Property Name="us_trxtype" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="us_instcd" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="us_irn" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="us_clientcd" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="us_execdt" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="us_mode" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="us_remarks" Type="varchar" MaxLength="75" Nullable="false" />
+    <Property Name="us_archiveyn" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="us_filler1" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="mkrid" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="mkrdt" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="mkrtm" Type="char" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Single.dbo.Vendor_master' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Vendor_master">
+    <Key>
+      <PropertyRef Name="vm_cd" />
+      <PropertyRef Name="vm_name" />
+    </Key>
+    <Property Name="vm_cd" Type="smallint" Nullable="false" />
+    <Property Name="vm_name" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="vm_add1" Type="varchar" MaxLength="36" />
+    <Property Name="vm_add2" Type="varchar" MaxLength="36" />
+    <Property Name="vm_add3" Type="varchar" MaxLength="36" />
+    <Property Name="vm_add4" Type="varchar" MaxLength="36" />
+    <Property Name="vm_pin" Type="varchar" MaxLength="7" />
+    <Property Name="vm_tel" Type="varchar" MaxLength="24" />
+    <Property Name="vm_email" Type="varchar" MaxLength="50" />
+    <Property Name="mkrid" Type="char" MaxLength="10" />
+    <Property Name="mkrdt" Type="char" MaxLength="10" />
+  </EntityType>
+  <Function Name="GetRecievedIn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="DBContextStoreContainer">
+    <EntitySet Name="Backoffice_balance" EntityType="Self.Backoffice_balance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bank_master" EntityType="Self.Bank_master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bpmaster" EntityType="Self.Bpmaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Branch_master" EntityType="Self.Branch_master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cc_calender" EntityType="Self.Cc_calender" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Chequemaster" EntityType="Self.Chequemaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Chequestop" EntityType="Self.Chequestop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Client_master1" EntityType="Self.Client_master1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Instrument_master" EntityType="Self.Instrument_master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Interdepository" EntityType="Self.Interdepository" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Interdepository_auth" EntityType="Self.Interdepository_auth" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inward_entry" EntityType="Self.Inward_entry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Security" EntityType="Self.Security" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Security_status" EntityType="Self.Security_status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stock_master" EntityType="Self.Stock_master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Trxbackoffice" EntityType="Self.Trxbackoffice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Auth_master" EntityType="Self.Auth_master" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Auth_master].[am_code] AS [am_code], 
+    [Auth_master].[am_amount] AS [am_amount], 
+    [Auth_master].[am_group1] AS [am_group1], 
+    [Auth_master].[am_group2] AS [am_group2], 
+    [Auth_master].[am_group3] AS [am_group3], 
+    [Auth_master].[mkrid] AS [mkrid], 
+    [Auth_master].[mkrdt] AS [mkrdt]
+    FROM [dbo].[Auth_master] AS [Auth_master]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Backoffice_audit" EntityType="Self.Backoffice_audit" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Backoffice_audit].[ba_trx_type] AS [ba_trx_type], 
+    [Backoffice_audit].[ba_pri_key] AS [ba_pri_key], 
+    [Backoffice_audit].[ba_branchcd] AS [ba_branchcd], 
+    [Backoffice_audit].[ba_field] AS [ba_field], 
+    [Backoffice_audit].[ba_oldvalue] AS [ba_oldvalue], 
+    [Backoffice_audit].[ba_newvalue] AS [ba_newvalue], 
+    [Backoffice_audit].[mkrid] AS [mkrid], 
+    [Backoffice_audit].[mkrdt] AS [mkrdt], 
+    [Backoffice_audit].[ba_computername] AS [ba_computername], 
+    [Backoffice_audit].[mkrtm] AS [mkrtm], 
+    [Backoffice_audit].[ba_delunique] AS [ba_delunique], 
+    [Backoffice_audit].[mkrtmold] AS [mkrtmold], 
+    [Backoffice_audit].[mkridold] AS [mkridold], 
+    [Backoffice_audit].[mkrdtold] AS [mkrdtold]
+    FROM [dbo].[Backoffice_audit] AS [Backoffice_audit]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Backoffice_delete" EntityType="Self.Backoffice_delete" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Backoffice_delete].[bd_instdesc] AS [bd_instdesc], 
+    [Backoffice_delete].[bd_trx_type] AS [bd_trx_type], 
+    [Backoffice_delete].[bd_trx_date] AS [bd_trx_date], 
+    [Backoffice_delete].[bd_client_id] AS [bd_client_id], 
+    [Backoffice_delete].[bd_isin] AS [bd_isin], 
+    [Backoffice_delete].[bd_qty] AS [bd_qty], 
+    [Backoffice_delete].[bd_market_type] AS [bd_market_type], 
+    [Backoffice_delete].[bd_settlement] AS [bd_settlement], 
+    [Backoffice_delete].[bd_execution_date] AS [bd_execution_date], 
+    [Backoffice_delete].[bd_other_dp_id] AS [bd_other_dp_id], 
+    [Backoffice_delete].[bd_other_client_id] AS [bd_other_client_id], 
+    [Backoffice_delete].[bd_other_cmbp_id] AS [bd_other_cmbp_id], 
+    [Backoffice_delete].[bd_internal_refno] AS [bd_internal_refno], 
+    [Backoffice_delete].[bd_other_markettype] AS [bd_other_markettype], 
+    [Backoffice_delete].[bd_other_settle_no] AS [bd_other_settle_no], 
+    [Backoffice_delete].[bd_lock_release_code] AS [bd_lock_release_code], 
+    [Backoffice_delete].[bd_lock_release_date] AS [bd_lock_release_date], 
+    [Backoffice_delete].[bd_cc_id1] AS [bd_cc_id1], 
+    [Backoffice_delete].[bd_cc_id2] AS [bd_cc_id2], 
+    [Backoffice_delete].[bd_status] AS [bd_status], 
+    [Backoffice_delete].[bd_trx_allow] AS [bd_trx_allow], 
+    [Backoffice_delete].[bd_pri_key] AS [bd_pri_key], 
+    [Backoffice_delete].[bd_authcode1] AS [bd_authcode1], 
+    [Backoffice_delete].[bd_authuserid1] AS [bd_authuserid1], 
+    [Backoffice_delete].[bd_authdt1] AS [bd_authdt1], 
+    [Backoffice_delete].[bd_authcode2] AS [bd_authcode2], 
+    [Backoffice_delete].[bd_authuserid2] AS [bd_authuserid2], 
+    [Backoffice_delete].[bd_authdt2] AS [bd_authdt2], 
+    [Backoffice_delete].[bd_branchcd] AS [bd_branchcd], 
+    [Backoffice_delete].[bd_branchbatchcd] AS [bd_branchbatchcd], 
+    [Backoffice_delete].[mkrid] AS [mkrid], 
+    [Backoffice_delete].[mkrdt] AS [mkrdt], 
+    [Backoffice_delete].[bd_authcode3] AS [bd_authcode3], 
+    [Backoffice_delete].[bd_authuserid3] AS [bd_authuserid3], 
+    [Backoffice_delete].[bd_authdt3] AS [bd_authdt3], 
+    [Backoffice_delete].[bd_authremarks] AS [bd_authremarks], 
+    [Backoffice_delete].[bd_scrollno] AS [bd_scrollno], 
+    [Backoffice_delete].[bd_totalcertificate] AS [bd_totalcertificate], 
+    [Backoffice_delete].[bd_computername] AS [bd_computername], 
+    [Backoffice_delete].[mkrtm] AS [mkrtm], 
+    [Backoffice_delete].[bd_unique] AS [bd_unique], 
+    [Backoffice_delete].[mkrtmold] AS [mkrtmold], 
+    [Backoffice_delete].[mkridold] AS [mkridold], 
+    [Backoffice_delete].[bd_authtm1] AS [bd_authtm1], 
+    [Backoffice_delete].[bd_authtm2] AS [bd_authtm2], 
+    [Backoffice_delete].[bd_authtm3] AS [bd_authtm3], 
+    [Backoffice_delete].[mkrdtold] AS [mkrdtold]
+    FROM [dbo].[Backoffice_delete] AS [Backoffice_delete]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Book_size" EntityType="Self.Book_size" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Book_size].[bk_size] AS [bk_size], 
+    [Book_size].[mkrid] AS [mkrid], 
+    [Book_size].[mkrdt] AS [mkrdt]
+    FROM [dbo].[Book_size] AS [Book_size]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Lot_size" EntityType="Self.Lot_size" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Lot_size].[lz_lotno] AS [lz_lotno], 
+    [Lot_size].[lz_type] AS [lz_type], 
+    [Lot_size].[lz_size] AS [lz_size], 
+    [Lot_size].[lz_status] AS [lz_status], 
+    [Lot_size].[mkrid] AS [mkrid], 
+    [Lot_size].[mkrdt] AS [mkrdt], 
+    [Lot_size].[lz_branchcd] AS [lz_branchcd]
+    FROM [dbo].[Lot_size] AS [Lot_size]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Rate_master" EntityType="Self.Rate_master" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Rate_master].[rm_isin_code] AS [rm_isin_code], 
+    [Rate_master].[rm_trx_date] AS [rm_trx_date], 
+    [Rate_master].[rm_rate] AS [rm_rate]
+    FROM [dbo].[Rate_master] AS [Rate_master]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Reasonfortrade" EntityType="Self.Reasonfortrade" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Reasonfortrade].[rt_code] AS [rt_code], 
+    [Reasonfortrade].[rt_desc] AS [rt_desc]
+    FROM [dbo].[Reasonfortrade] AS [Reasonfortrade]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Sysparameter" EntityType="Self.Sysparameter" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Sysparameter].[sp_parmcd] AS [sp_parmcd], 
+    [Sysparameter].[sp_effdt] AS [sp_effdt], 
+    [Sysparameter].[sp_name] AS [sp_name], 
+    [Sysparameter].[sp_datatype] AS [sp_datatype], 
+    [Sysparameter].[sp_datalen] AS [sp_datalen], 
+    [Sysparameter].[sp_table] AS [sp_table], 
+    [Sysparameter].[sp_sysvalue] AS [sp_sysvalue], 
+    [Sysparameter].[sp_Securedyn] AS [sp_Securedyn], 
+    [Sysparameter].[mkrid] AS [mkrid], 
+    [Sysparameter].[mkrdt] AS [mkrdt]
+    FROM [dbo].[Sysparameter] AS [Sysparameter]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Used_slip" EntityType="Self.Used_slip" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Used_slip].[us_trxtype] AS [us_trxtype], 
+    [Used_slip].[us_instcd] AS [us_instcd], 
+    [Used_slip].[us_irn] AS [us_irn], 
+    [Used_slip].[us_clientcd] AS [us_clientcd], 
+    [Used_slip].[us_execdt] AS [us_execdt], 
+    [Used_slip].[us_mode] AS [us_mode], 
+    [Used_slip].[us_remarks] AS [us_remarks], 
+    [Used_slip].[us_archiveyn] AS [us_archiveyn], 
+    [Used_slip].[us_filler1] AS [us_filler1], 
+    [Used_slip].[mkrid] AS [mkrid], 
+    [Used_slip].[mkrdt] AS [mkrdt], 
+    [Used_slip].[mkrtm] AS [mkrtm]
+    FROM [dbo].[Used_slip] AS [Used_slip]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vendor_master" EntityType="Self.Vendor_master" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vendor_master].[vm_cd] AS [vm_cd], 
+    [Vendor_master].[vm_name] AS [vm_name], 
+    [Vendor_master].[vm_add1] AS [vm_add1], 
+    [Vendor_master].[vm_add2] AS [vm_add2], 
+    [Vendor_master].[vm_add3] AS [vm_add3], 
+    [Vendor_master].[vm_add4] AS [vm_add4], 
+    [Vendor_master].[vm_pin] AS [vm_pin], 
+    [Vendor_master].[vm_tel] AS [vm_tel], 
+    [Vendor_master].[vm_email] AS [vm_email], 
+    [Vendor_master].[mkrid] AS [mkrid], 
+    [Vendor_master].[mkrdt] AS [mkrdt]
+    FROM [dbo].[Vendor_master] AS [Vendor_master]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

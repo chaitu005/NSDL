@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bank_master">
+    <Key>
+      <PropertyRef Name="bk_micr" />
+    </Key>
+    <Property Name="bk_id" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="bk_name" Type="String" MaxLength="135" FixedLength="false" Unicode="false" />
+    <Property Name="bk_branch" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="bk_ifsccode" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="bk_micr" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="bk_add1" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="bk_add2" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="bk_add3" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="bk_add4" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="bk_pin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="bk_filler1" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="bk_filler2" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="bk_status" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="bk_filler3" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Branch_master">
+    <Key>
+      <PropertyRef Name="bm_branchcd" />
+    </Key>
+    <Property Name="bm_branchcd" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="bm_branchname" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="bm_contact" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="bm_add1" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="bm_add2" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="bm_add3" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="bm_city" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="bm_pin" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="bm_phone" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="bm_fax" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="bm_email" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="bm_allow" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="bm_batchno" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="bm_ip_add" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="bm_dialup" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="bm_server" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="bm_database" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="bm_dbo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="bm_user" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="bm_pwd" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="bm_workarea" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrdt" Type="DateTime" Precision="3" />
+    <Property Name="bm_percentage" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="bm_flag" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="bm_authorisation" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Chequemaster">
+    <Key>
+      <PropertyRef Name="chm_chqno" />
+      <PropertyRef Name="chm_instcd" />
+      <PropertyRef Name="chm_booksize" />
+    </Key>
+    <Property Name="chm_cmcd" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="chm_chqno" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="chm_instcd" Type="Int16" Nullable="false" />
+    <Property Name="chm_booksize" Type="Int16" Nullable="false" />
+    <Property Name="chm_refno" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="chm_refdate" Type="DateTime" Precision="3" />
+    <Property Name="chm_status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="chm_issuedate" Type="DateTime" Precision="3" />
+    <Property Name="chm_remarks" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="chm_branchcd" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="mkrdt" Type="DateTime" Precision="3" />
+    <Property Name="chm_fromno" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="chm_tono" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="chm_type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Client_master1">
+    <Key>
+      <PropertyRef Name="cm_cd" />
+    </Key>
+    <Property Name="cm_brcode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="cm_cd" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="cm_benttype" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="cm_bensubtype" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="cm_ben_shortname" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="cm_ben_acccatorgy" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="cm_occup" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="cm_name" Type="String" MaxLength="135" FixedLength="false" Unicode="false" />
+    <Property Name="cm_filler" Type="String" MaxLength="115" FixedLength="false" Unicode="false" />
+    <Property Name="cm_fatherhu" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="cm_add1" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_add2" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_add3" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_add4" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_pin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="cm_tele1" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="cm_fax" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="cm_sech_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="cm_sech_fathername" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="cm_thih_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="cm_thih_fathername" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="cm_bp_id" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="cm_addperflag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_opendate" Type="DateTime" Precision="3" />
+    <Property Name="cm_filler1" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+    <Property Name="cm_firstpanno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="cm_secpanno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="cm_thirdpanno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="cm_nomgur_flag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cm_nomgur_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="cm_dobmin" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="cm_nomineeadd1" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_nomineeadd2" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_nomineeadd3" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_nomineeadd4" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_nomineepin" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="cm_stainst" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cm_rgess" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cm_bsda" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cm_filler2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="cm_bankifscocde" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="cm_commdity" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cm_bankacttype" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="cm_bankname" Type="String" MaxLength="135" FixedLength="false" Unicode="false" />
+    <Property Name="cm_bankadd1" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_bankadd2" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_bankadd3" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_bankadd4" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_bankpin" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="cm_micr" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="cm_rbi_refno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cm_rbi_appdate" Type="DateTime" Precision="3" />
+    <Property Name="cm_sebireg" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="cm_taxstatus" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="cm_ben_satus" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="cm_ben_satatchagecode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cm_acc_closuredate" Type="DateTime" Precision="3" />
+    <Property Name="cm_filler3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="cm_corforadd1" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_corforadd2" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_corforadd3" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_corforadd4" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_corforpin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="cm_corfortele1" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="cm_corforfax" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="cm_minornomineei_ind" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cm_minornominee_dob" Type="DateTime" Precision="3" />
+    <Property Name="cm_minornomineei_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="cm_minornomineei_add1" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_minornomineei_add2" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_minornomineei_add3" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_minornomineei_add4" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cm_minornomineei_pin" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="cm_bankactno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="cm_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cm_mobile" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="cm_filler4" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cm_rtaemai1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cm_sms" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_panflag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_auth_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_nonomniee_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_filler5" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="cm_secondemail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cm_second_mobile" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="cm_filler6" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cm_rtaemail2" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cm_sec_sms" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_secpan_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_secauth_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_filler7" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="cm_thirdemail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cm_third_mobile" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="cm_filler8" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="cm_rtaemail3" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cm_thir_sms" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_thirpan_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_thirauth_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_addhar1" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="cm_filler9" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="cm_addhar2" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="cm_filler10" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="cm_addhar3" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="cm_filler11" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="cm_filler12" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="cm_brboffcode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="cm_groupcd" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="cm_familycd" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="cm_introducer" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="cm_attorney" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_indicator" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_add_pref_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_chgsscheme" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="cm_billcycle" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_statements" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="cm_billflag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_billcode" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="cm_collectioncode" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="cm_allowcredit" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cm_upfront" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_lastbill" Type="DateTime" Precision="3" />
+    <Property Name="cm_keepsettlement" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_fre_trx" Type="Byte" />
+    <Property Name="cm_fre_hold" Type="Byte" />
+    <Property Name="cm_fre_bill" Type="Byte" />
+    <Property Name="cm_blsavingcd" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="cm_amtmntdt" Type="DateTime" Precision="3" />
+    <Property Name="cm_updatebal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cm_schedule" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="cm_openingbal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="mkrdt" Type="DateTime" Precision="3" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="cm_freezeyn" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_freezereason" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="cm_PoaForPayin" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cm_remissier" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="cm_remissierscheme" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Instrument_master">
+    <Key>
+      <PropertyRef Name="im_instcd" />
+    </Key>
+    <Property Name="im_instcd" Type="Int16" Nullable="false" />
+    <Property Name="im_desc" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="im_trtype" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="im_reorderlevel" Type="Int32" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="mkrdt" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="im_defaultyn" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Stock_master">
+    <Key>
+      <PropertyRef Name="stm_instcd" />
+      <PropertyRef Name="stm_fromno" />
+      <PropertyRef Name="stm_booksize" />
+    </Key>
+    <Property Name="stm_instcd" Type="Int16" Nullable="false" />
+    <Property Name="stm_vmcd" Type="Int16" />
+    <Property Name="stm_vmrefno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="stm_date" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="stm_fromno" Type="Int32" Nullable="false" />
+    <Property Name="stm_tono" Type="Int32" Nullable="false" />
+    <Property Name="stm_booksize" Type="Int16" Nullable="false" />
+    <Property Name="stm_noofbooks" Type="Int32" Nullable="false" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="mkrdt" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="stm_vmtype" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="stm_bookfromno" Type="Int32" />
+    <Property Name="stm_booktono" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Lot_size">
+    <Key>
+      <PropertyRef Name="lz_lotno" />
+      <PropertyRef Name="lz_type" />
+      <PropertyRef Name="lz_size" />
+      <PropertyRef Name="lz_status" />
+      <PropertyRef Name="mkrid" />
+      <PropertyRef Name="lz_branchcd" />
+    </Key>
+    <Property Name="lz_lotno" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="lz_type" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="lz_size" Type="Int32" Nullable="false" />
+    <Property Name="lz_status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="mkrdt" Type="DateTime" Precision="3" />
+    <Property Name="lz_branchcd" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vendor_master">
+    <Key>
+      <PropertyRef Name="vm_cd" />
+      <PropertyRef Name="vm_name" />
+    </Key>
+    <Property Name="vm_cd" Type="Int16" Nullable="false" />
+    <Property Name="vm_name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vm_add1" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="vm_add2" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="vm_add3" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="vm_add4" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="vm_pin" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="vm_tel" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="vm_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mkrid" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="mkrdt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="SingleEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bank_master" EntityType="Self.Bank_master" />
+    <EntitySet Name="Branch_master" EntityType="Self.Branch_master" />
+    <EntitySet Name="Chequemasters" EntityType="Self.Chequemaster" />
+    <EntitySet Name="Client_master1" EntityType="Self.Client_master1" />
+    <EntitySet Name="Instrument_master" EntityType="Self.Instrument_master" />
+    <EntitySet Name="Stock_master" EntityType="Self.Stock_master" />
+    <EntitySet Name="Lot_size" EntityType="Self.Lot_size" />
+    <EntitySet Name="Vendor_master" EntityType="Self.Vendor_master" />
+    <EntitySet Name="Book_size" EntityType="DBContext.Book_size" />
+    <EntitySet Name="Inward_entry" EntityType="DBContext.Inward_entry" />
+    <FunctionImport Name="GetRecievedIn" ReturnType="Collection(DBContext.GetRecievedIn_Result)" />
+    <EntitySet Name="Trxbackoffices" EntityType="DBContext.Trxbackoffice" />
+    <EntitySet Name="Securities" EntityType="DBContext.Security" />
+    <EntitySet Name="Sysparameters" EntityType="DBContext.Sysparameter" />
+    <EntitySet Name="Reasonfortrades" EntityType="DBContext.Reasonfortrade" />
+    <EntitySet Name="Bpmasters" EntityType="DBContext.Bpmaster" />
+    <EntitySet Name="Cc_calender" EntityType="DBContext.Cc_calender" />
+    <EntitySet Name="Chequestops" EntityType="DBContext.Chequestop" />
+    <EntitySet Name="Rate_master" EntityType="DBContext.Rate_master" />
+    <EntitySet Name="Used_slip" EntityType="DBContext.Used_slip" />
+    <EntitySet Name="Auth_master" EntityType="DBContext.Auth_master" />
+    <EntitySet Name="Backoffice_balance" EntityType="DBContext.Backoffice_balance" />
+    <EntitySet Name="Backoffice_audit" EntityType="DBContext.Backoffice_audit" />
+    <EntitySet Name="Backoffice_delete" EntityType="DBContext.Backoffice_delete" />
+    <EntitySet Name="Interdepositories" EntityType="DBContext.Interdepository" />
+    <EntitySet Name="Interdepository_auth" EntityType="DBContext.Interdepository_auth" />
+    <EntitySet Name="Security_status" EntityType="DBContext.Security_status" />
+  </EntityContainer>
+  <EntityType Name="Book_size">
+    <Key>
+      <PropertyRef Name="bk_size" />
+    </Key>
+    <Property Name="bk_size" Type="Int16" Nullable="false" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="mkrdt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Inward_entry">
+    <Key>
+      <PropertyRef Name="ie_scrollno" />
+    </Key>
+    <Property Name="ie_lotno" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ie_trxtype" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="ie_instno" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="ie_slipno" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="ie_cmcd" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="ie_dt" Type="DateTime" Precision="3" />
+    <Property Name="ie_execdt" Type="DateTime" Precision="3" />
+    <Property Name="ie_nooftrx" Type="Int32" />
+    <Property Name="ie_noofcert" Type="Int32" />
+    <Property Name="ie_rejected" Type="Int32" />
+    <Property Name="ie_scrollno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrdt" Type="DateTime" Precision="3" />
+    <Property Name="ie_charge" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ie_mode" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="ie_remark" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ie_pri_key" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ie_branchcd" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="ie_ref" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="GetRecievedIn_Result">
+    <Property Type="String" Name="cm_cd" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="cm_name" Nullable="true" MaxLength="135" />
+    <Property Type="Int32" Name="Amt" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetRecievedIn1_Result">
+    <Property Type="String" Name="cm_cd" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="cm_name" Nullable="true" MaxLength="135" />
+    <Property Type="Int32" Name="Amt" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="Trxbackoffice">
+    <Key>
+      <PropertyRef Name="tb_pri_key" />
+      <PropertyRef Name="tb_branchcd" />
+    </Key>
+    <Property Name="tb_pri_key" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+    <Property Name="tb_internal_refno" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="tb_instcd" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="tb_trx_type" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="tb_trx_date" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_trx_flag" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tb_client_id" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="tb_isin" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="tb_qty" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="tb_market_type" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="tb_settlement" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="tb_exchangeid" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="tb_chid" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="tb_other_dp_id" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_other_client_id" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="tb_other_cmbp_id" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_other_markettype" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="tb_other_settle_no" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="tb_br_code" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_reference" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="tb_irre_code1" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="tb_irre_code2" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="tb_irre_code3" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="tb_irre_code4" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="tb_br_pri_key" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="tb_status" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="tb_trx_allow" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tb_authcode1" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tb_authuserid1" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_authdt1" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_authcode2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tb_authuserid2" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_authdt2" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_batch_no" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="tb_branchcd" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="tb_branchbatchcd" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="tb_cash" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tb_reasfortrade" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="tb_rejreason" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrdt" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_authcode3" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tb_authuserid3" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_authdt3" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_authremarks" Type="String" MaxLength="75" FixedLength="true" Unicode="false" />
+    <Property Name="tb_scrollno" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="tb_obligationid" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="tb_serialno" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="tb_tradeno" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="tb_exec_date" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mkrtm" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_authtm1" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_authtm2" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_authtm3" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="tb_instreceivemode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tb_recoslipyn" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tb_entrymode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tb_lotno" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Security">
+    <Key>
+      <PropertyRef Name="sc_isincode" />
+    </Key>
+    <Property Name="sc_isincode" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="sc_nsecurity_code" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="sc_book_basis" Type="Int32" />
+    <Property Name="sc_isinname" Type="String" Nullable="false" MaxLength="140" FixedLength="false" Unicode="false" />
+    <Property Name="sc_company_code" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="sc_company_name" Type="String" Nullable="false" MaxLength="140" FixedLength="false" Unicode="false" />
+    <Property Name="sc_security_type" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="sc_security_subtype" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="sc_issue" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="sc_maturity_date" Type="DateTime" Precision="3" />
+    <Property Name="sc_convert_date" Type="DateTime" Precision="3" />
+    <Property Name="sc_face_value" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="sc_convert_amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="sc_agentname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sc_security_status" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="sc_security_remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sc_decimal_allow" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="sc_reg_code" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="sc_reg_name" Type="String" MaxLength="140" FixedLength="true" Unicode="false" />
+    <Property Name="sc_bsecd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sc_nsesym" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="sc_nsesrs" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="sc_attn" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="sc_sl_balance" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="sc_rate" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="sc_rolling" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="sc_corporateaction" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrdt" Type="DateTime" Precision="3" />
+    <Property Name="sc_sector" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sysparameter">
+    <Key>
+      <PropertyRef Name="sp_parmcd" />
+    </Key>
+    <Property Name="sp_parmcd" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="sp_effdt" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="sp_name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="sp_datatype" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="sp_datalen" Type="Decimal" Precision="2" Scale="0" />
+    <Property Name="sp_table" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="sp_sysvalue" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="sp_Securedyn" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrdt" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Reasonfortrade">
+    <Key>
+      <PropertyRef Name="rt_code" />
+    </Key>
+    <Property Name="rt_code" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="rt_desc" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Bpmaster">
+    <Key>
+      <PropertyRef Name="bp_id" />
+    </Key>
+    <Property Name="bp_id" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="bp_role" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="bp_add1" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="bp_add2" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="bp_add3" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="bp_add4" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="bp_pin" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="bp_phone" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="bp_fax" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="bp_assd_cc_id" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="bp_assd_dp_id" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="bp_assd_cc_cmid" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="bp_category" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="bp_name" Type="String" MaxLength="135" FixedLength="false" Unicode="false" />
+    <Property Name="bp_stat" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Cc_calender">
+    <Key>
+      <PropertyRef Name="cc_id" />
+      <PropertyRef Name="cc_mkt_type" />
+      <PropertyRef Name="cc_settle_no" />
+    </Key>
+    <Property Name="cc_id" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="cc_mkt_type" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="cc_settle_no" Type="String" Nullable="false" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="cc_settle_periodfrom" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cc_settle_periodto" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cc_nsdl_deadlinedt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cc_nsdl_deadlinett" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="cc_payin_dt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cc_payout_dt" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Chequestop">
+    <Key>
+      <PropertyRef Name="chs_cmcd" />
+      <PropertyRef Name="chs_chqno" />
+      <PropertyRef Name="chs_date" />
+      <PropertyRef Name="chs_instcd" />
+    </Key>
+    <Property Name="chs_cmcd" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="chs_chqno" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="chs_chqdate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="chs_reference" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="chs_refdate" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="chs_status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="chs_date" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="chs_instcd" Type="Int16" Nullable="false" />
+    <Property Name="chs_remark" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="mkrdt" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Rate_master">
+    <Key>
+      <PropertyRef Name="rm_isin_code" />
+      <PropertyRef Name="rm_trx_date" />
+      <PropertyRef Name="rm_rate" />
+    </Key>
+    <Property Name="rm_isin_code" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="rm_trx_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="rm_rate" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Used_slip">
+    <Key>
+      <PropertyRef Name="us_trxtype" />
+      <PropertyRef Name="us_instcd" />
+      <PropertyRef Name="us_irn" />
+      <PropertyRef Name="us_clientcd" />
+      <PropertyRef Name="us_execdt" />
+      <PropertyRef Name="us_mode" />
+      <PropertyRef Name="us_remarks" />
+      <PropertyRef Name="us_archiveyn" />
+      <PropertyRef Name="us_filler1" />
+      <PropertyRef Name="mkrid" />
+      <PropertyRef Name="mkrdt" />
+      <PropertyRef Name="mkrtm" />
+    </Key>
+    <Property Name="us_trxtype" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="us_instcd" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="us_irn" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="us_clientcd" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="us_execdt" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="us_mode" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="us_remarks" Type="String" Nullable="false" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="us_archiveyn" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="us_filler1" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="mkrid" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrdt" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrtm" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Auth_master">
+    <Key>
+      <PropertyRef Name="am_code" />
+      <PropertyRef Name="am_amount" />
+      <PropertyRef Name="am_group1" />
+    </Key>
+    <Property Name="am_code" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="am_amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="am_group1" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="am_group2" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="am_group3" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrdt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Backoffice_balance">
+    <Key>
+      <PropertyRef Name="bc_cmcd" />
+    </Key>
+    <Property Name="bc_cmcd" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="bc_ledger" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="bc_mkrid" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="bc_mkrdt" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Backoffice_audit">
+    <Key>
+      <PropertyRef Name="ba_trx_type" />
+      <PropertyRef Name="ba_pri_key" />
+      <PropertyRef Name="ba_branchcd" />
+      <PropertyRef Name="ba_field" />
+      <PropertyRef Name="ba_oldvalue" />
+      <PropertyRef Name="ba_newvalue" />
+      <PropertyRef Name="mkrid" />
+      <PropertyRef Name="mkrdt" />
+      <PropertyRef Name="ba_computername" />
+      <PropertyRef Name="mkrtm" />
+      <PropertyRef Name="ba_delunique" />
+    </Key>
+    <Property Name="ba_trx_type" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="ba_pri_key" Type="Int32" Nullable="false" />
+    <Property Name="ba_branchcd" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="ba_field" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ba_oldvalue" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ba_newvalue" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="mkrid" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrdt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ba_computername" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="mkrtm" Type="String" Nullable="false" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="ba_delunique" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="mkrtmold" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkridold" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrdtold" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Backoffice_delete">
+    <Key>
+      <PropertyRef Name="bd_trx_type" />
+      <PropertyRef Name="bd_trx_date" />
+      <PropertyRef Name="bd_client_id" />
+      <PropertyRef Name="bd_isin" />
+      <PropertyRef Name="bd_execution_date" />
+      <PropertyRef Name="bd_internal_refno" />
+      <PropertyRef Name="bd_status" />
+      <PropertyRef Name="bd_trx_allow" />
+      <PropertyRef Name="bd_pri_key" />
+      <PropertyRef Name="bd_branchcd" />
+      <PropertyRef Name="mkrtm" />
+      <PropertyRef Name="bd_unique" />
+    </Key>
+    <Property Name="bd_instdesc" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="bd_trx_type" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="bd_trx_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="bd_client_id" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="bd_isin" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="bd_qty" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="bd_market_type" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="bd_settlement" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="bd_execution_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="bd_other_dp_id" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="bd_other_client_id" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="bd_other_cmbp_id" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="bd_internal_refno" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="bd_other_markettype" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="bd_other_settle_no" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="bd_lock_release_code" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="bd_lock_release_date" Type="DateTime" Precision="3" />
+    <Property Name="bd_cc_id1" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="bd_cc_id2" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="bd_status" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="bd_trx_allow" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="bd_pri_key" Type="Int32" Nullable="false" />
+    <Property Name="bd_authcode1" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="bd_authuserid1" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="bd_authdt1" Type="DateTime" Precision="3" />
+    <Property Name="bd_authcode2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="bd_authuserid2" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="bd_authdt2" Type="DateTime" Precision="3" />
+    <Property Name="bd_branchcd" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="bd_branchbatchcd" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrdt" Type="DateTime" Precision="3" />
+    <Property Name="bd_authcode3" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="bd_authuserid3" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="bd_authdt3" Type="DateTime" Precision="3" />
+    <Property Name="bd_authremarks" Type="String" MaxLength="75" FixedLength="true" Unicode="false" />
+    <Property Name="bd_scrollno" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="bd_totalcertificate" Type="Int32" />
+    <Property Name="bd_computername" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="mkrtm" Type="String" Nullable="false" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="bd_unique" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="mkrtmold" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkridold" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="bd_authtm1" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="bd_authtm2" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="bd_authtm3" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrdtold" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Interdepository">
+    <Key>
+      <PropertyRef Name="id_pri_key" />
+      <PropertyRef Name="id_branchcd" />
+    </Key>
+    <Property Name="id_instcd" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="id_trxdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="id_trxtype" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="id_trxflag" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="id_clientid" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_isin" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="id_qty" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="id_mkttype" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="id_settlementno" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="id_executiondate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="id_otherclientid" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="id_otherdpid" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_internalrefno" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="id_cc_id" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="id_status" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="id_allow" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="id_othersettlement" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="id_authcode1" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="id_authuserid1" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_authdate1" Type="DateTime" Precision="3" />
+    <Property Name="id_authcode2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="id_authuserid2" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_authdate2" Type="DateTime" Precision="3" />
+    <Property Name="id_batch_no" Type="Int32" />
+    <Property Name="id_pri_key" Type="Int32" Nullable="false" />
+    <Property Name="id_branchcd" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="id_branchbatchcd" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrdt" Type="DateTime" Precision="3" />
+    <Property Name="id_authcode3" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="id_authuserid3" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_authdt3" Type="DateTime" Precision="3" />
+    <Property Name="id_authremarks" Type="String" MaxLength="75" FixedLength="true" Unicode="false" />
+    <Property Name="id_scrollno" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="id_dqty" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="id_lotno" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="id_authtm1" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_authtm2" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_authtm3" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrtm" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_instreceivemode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="id_recoslipyn" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="id_entrymode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="id_remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="id_CDSLsettlement" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Interdepository_auth">
+    <Key>
+      <PropertyRef Name="id_pri_key" />
+      <PropertyRef Name="id_branchcd" />
+    </Key>
+    <Property Name="id_instcd" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="id_trxdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="id_trxtype" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="id_trxflag" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="id_clientid" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_isin" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="id_qty" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="id_mkttype" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="id_settlementno" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="id_executiondate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="id_otherclientid" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="id_otherdpid" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_internalrefno" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="id_cc_id" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="id_status" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="id_allow" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="id_othersettlement" Type="String" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Name="id_authcode1" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="id_authuserid1" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_authdate1" Type="DateTime" Precision="3" />
+    <Property Name="id_authcode2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="id_authuserid2" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_authdate2" Type="DateTime" Precision="3" />
+    <Property Name="id_batch_no" Type="Int32" />
+    <Property Name="id_pri_key" Type="Int32" Nullable="false" />
+    <Property Name="id_branchcd" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="id_branchbatchcd" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="mkrid" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrdt" Type="DateTime" Precision="3" />
+    <Property Name="id_authcode3" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="id_authuserid3" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_authdt3" Type="DateTime" Precision="3" />
+    <Property Name="id_authremarks" Type="String" MaxLength="75" FixedLength="true" Unicode="false" />
+    <Property Name="id_scrollno" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="id_dqty" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="id_lotno" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="id_authtm1" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_authtm2" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_authtm3" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="mkrtm" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="id_instreceivemode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="id_recoslipyn" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="id_entrymode" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Security_status">
+    <Key>
+      <PropertyRef Name="ss_code" />
+    </Key>
+    <Property Name="ss_code" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="ss_description" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
