@@ -1,0 +1,6 @@
+E:\Applications\Chaitu\NSDL\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\Applications\Chaitu\NSDL\DAL\bin\DAL.dll.config
+E:\Applications\Chaitu\NSDL\DAL\bin\DAL.dll
+E:\Applications\Chaitu\NSDL\DAL\bin\DAL.pdb
+E:\Applications\Chaitu\NSDL\DAL\obj\Debug\DAL.dll
+E:\Applications\Chaitu\NSDL\DAL\obj\Debug\DAL.pdb
